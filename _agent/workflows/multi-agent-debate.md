@@ -1,37 +1,134 @@
 ---
-description: Quy trình phản biện đa tác nhân giữa các phòng ban và cấp bậc
+description: Quy trình phản biện đa tác nhân giữa các phòng ban và cấp bậc — Red Team methodology
 ---
 
-# Multi-Agent Debate — Phản biện Đa tác nhân (Hệ thống Cấp bậc)
+# /multi-agent-debate — Phản biện Đa tác nhân
 
-Quy trình này đảm bảo mọi quyết định quan trọng đều được "thử lửa" qua nhiều góc nhìn chuyên môn khác nhau.
+> **SOP-002** | Áp dụng khi: Quyết định lớn, chiến lược mới, hoặc khi cần stress-test một ý tưởng
 
-## Quy trình Thực hiện
+---
 
-### 1. Chỉ định Team Phản biện (CEO/Executive Lead)
-- Khi có một đề xuất chiến lược hoặc kế hoạch lớn.
-- CEO chỉ định 1 phòng ban Đề xuất (Proponent) và ít nhất 1 phòng ban Phản biện (Opponent/Devil's Advocate).
+## Khi nào kích hoạt
 
-### 2. Trình bày Phương án (Proponent Team)
-- **Executive** trình bày chiến lược.
-- **Manager** trình bày kế hoạch thực thi.
-- **Specialist** trình bày dữ liệu/sản phẩm mẫu.
+- Đề xuất ảnh hưởng >$10K hoặc >3 tháng
+- Chiến lược mới hoặc pivot
+- Khi CEO/người dùng yêu cầu "phản biện" hoặc "challenge"
+- Khi 2+ phòng ban có ý kiến trái chiều
 
-### 3. Phản biện Chuyên môn (Opponent Team)
-- Các Specialists phòng ban đối diện tìm lỗ hổng kỹ thuật/dữ liệu.
-- Các Managers phòng ban đối diện đánh giá rủi ro vận hành/chi phí.
-- Các Executives phòng ban đối diện đánh giá tác động chiến lược/pháp lý.
+## Thành phần Tham gia
 
-### 4. Đối thoại & Hiệu chỉnh
-- Bên Đề xuất phản hồi các câu hỏi phản biện.
-- Hiệu chỉnh phương án dựa trên các góp ý xác đáng.
+| Vai trò | Trách nhiệm |
+|---------|-------------|
+| **Proposer (Đề xuất)** | Trình bày đề xuất + supporting evidence |
+| **Red Team (Phản biện)** | Challenge mọi assumption, tìm blind spots |
+| **Arbitrator (Trọng tài)** | CEO hoặc Executive cấp cao nhất — quyết định cuối |
+| **Analyst (Phân tích)** | Data team cung cấp evidence cho cả hai bên |
 
-### 5. Kết luận & Phê duyệt (CEO)
-- CEO lắng nghe tranh luận và đưa ra phán quyết cuối cùng.
-- Trình bày: **Các điểm đã Phản biện** + **Giải pháp tối ưu cuối cùng**.
+## Red Team Assignment Matrix
 
-## Ma trận Phản biện bắt buộc
-- Chiến dịch Marketing lớn → **Finance** phản biện Ngân sách/ROI.
-- Thay đổi Kiến trúc Tech → **Operations** phản biện rủi ro vận hành.
-- Tuyển dụng nhân sự cấp cao → **Finance** phản biện quỹ lương.
-- Hợp đồng đối tác mới → **Legal** phản biện rủi ro pháp lý.
+| Khi Proposer là... | Red Team sẽ là... | Focus phản biện |
+|--------------------|--------------------|----------------|
+| Marketing/Sales | CFO + General Counsel | ROI, Legal risk, Budget |
+| Technology | CFO + COO | Cost, Ops feasibility, Timeline |
+| Finance | CSO + CTO | Strategy fit, Tech alternatives |
+| HR | CFO + General Counsel | Budget, Labor law compliance |
+| Strategy | Head of Data + CFO | Data evidence, Financial viability |
+| Product | Sales Manager + CTO | Market demand, Tech feasibility |
+| Operations | CTO + CHRO | Automation potential, People impact |
+
+---
+
+## Quy trình 6 Vòng
+
+### Vòng 1: PRESENT — Trình bày Đề xuất
+```
+// turbo
+Actor: Proposer
+Format:
+├── Problem statement (Vấn đề cần giải quyết)
+├── Proposed solution (Giải pháp đề xuất)
+├── Expected impact (Tác động kỳ vọng — quantified)
+├── Resource requirements (Cần gì: tiền, người, thời gian)
+├── Risk assessment (Rủi ro đã nhận diện)
+└── Success criteria (Đo lường thành công bằng gì)
+```
+
+### Vòng 2: EVIDENCE — Phân tích Dữ liệu
+```
+// turbo
+Actor: Data Analyst / Growth Analyst
+Actions:
+├── Verify giả định của Proposer bằng data
+├── Benchmark vs industry / competitors
+├── Sensitivity analysis: Nếu assumption sai 20% thì kết quả thay đổi thế nào?
+├── Historical evidence: Công ty đã thử tương tự chưa? Kết quả?
+Output: Data brief (supportive + contradictory evidence)
+```
+
+### Vòng 3: CHALLENGE — Phản biện (Red Team)
+```
+// turbo
+Actor: Red Team (2-3 người từ các phòng ban khác)
+Framework (Pre-mortem):
+├── "Giả sử 12 tháng sau, dự án THẤT BẠI. Tại sao?"
+├── "Assumption nào CHẮC CHẮN sai?"
+├── "Đối thủ sẽ phản ứng thế nào?"
+├── "Chi phí ẩn nào chưa tính?"
+├── "Cơ hội chi phí (Opportunity cost) là gì?"
+├── "Điều gì có thể giết chết dự án từ bên trong?"
+└── "Worst case scenario — thiệt hại tối đa bao nhiêu?"
+
+Output: Danh sách challenges + risks chưa addressed
+```
+
+### Vòng 4: DEFEND — Phản hồi
+```
+// turbo
+Actor: Proposer
+Actions:
+├── Respond từng challenge:
+│   ├── ACCEPT: "Đúng, chúng tôi sẽ mitigate bằng [action]"
+│   ├── COUNTER: "Không đúng vì [evidence], và đây là data..."
+│   └── ACKNOWLEDGE: "Rủi ro thật, nhưng chấp nhận vì [reason]"
+├── Cập nhật đề xuất nếu cần
+Output: Revised proposal (v2)
+```
+
+### Vòng 5: SYNTHESIZE — Tổng hợp
+```
+// turbo
+Actor: Arbitrator (CEO/Executive)
+Actions:
+├── Tóm tắt observations từ cả 2 bên
+├── Đánh giá:
+│   ├── Evidence quality (data có đủ mạnh?)
+│   ├── Risk tolerance (chấp nhận được mức rủi ro này?)
+│   ├── Resource availability (có đủ nguồn lực?)
+│   └── Strategic alignment (khớp OKR/chiến lược?)
+Output: Synthesis report
+```
+
+### Vòng 6: DECIDE — Quyết định
+```
+// turbo
+Actor: Arbitrator
+Decision options:
+├── ✅ APPROVE: Proceed as proposed (v2)
+├── ✅ APPROVE WITH CONDITIONS: Proceed nhưng thêm guardrails
+├── 🔄 PILOT: Thử nhỏ trước, review sau 30 ngày
+├── 🔄 REVISE: Sửa đổi đáng kể, debate lại
+├── ❌ REJECT: Không proceed, giải thích lý do
+└── ⏸️ DEFER: Chưa đủ data, cần nghiên cứu thêm
+
+Output: Decision Record (dùng template decision-record.md)
+```
+
+---
+
+## Quy tắc Debate
+
+1. **Attack ideas, not people** — Phản biện ý tưởng, không phải con người
+2. **Data > Opinions** — Ý kiến có data mạnh hơn ý kiến không data
+3. **Steel man, not straw man** — Hiểu đúng ý đối phương trước khi phản biện
+4. **Time-boxed** — Mỗi vòng có giới hạn, không kéo dài vô hạn
+5. **Written record** — Mọi thứ phải documented, lưu vào memory/decisions/

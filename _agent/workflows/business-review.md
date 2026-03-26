@@ -1,48 +1,126 @@
 ---
-description: Quy trình đánh giá kinh doanh định kỳ (Weekly / Monthly / Quarterly Business Review)
+description: Quy trình đánh giá kinh doanh định kỳ (Weekly / Monthly / Quarterly Business Review) — cấp doanh nghiệp
 ---
 
-# Business Review — Đánh giá Kinh doanh Định kỳ
+# /business-review — Đánh giá Kinh doanh Định kỳ
 
-Quy trình này hướng dẫn thực hiện buổi review kinh doanh chuyên nghiệp.
+> **SOP-003** | Áp dụng: Review hiệu quả kinh doanh theo kỳ
+> Tham chiếu: `REPORTING_STANDARDS.md`, `COMPANY_CONTEXT.md`
+
+---
 
 ## Khi nào sử dụng
-
-- Đánh giá tuần (Weekly Standup / WBR)
-- Đánh giá tháng (Monthly Business Review / MBR)
-- Đánh giá quý (Quarterly Business Review / QBR)
-- Khi cần đánh giá toàn diện tình hình kinh doanh
+- Weekly: Thứ 2 hàng tuần (Executive Sync)
+- Monthly: Ngày 5 mỗi tháng (MBR)
+- Quarterly: Đầu quý mới (QBR)
+- Ad-hoc: Khi CEO/người dùng yêu cầu đánh giá
 
 ## Quy trình thực hiện
 
-### Bước 1: Thu thập Dữ liệu
-Hỏi người dùng cung cấp (hoặc ước lượng) các chỉ số:
-- **Revenue**: MRR, ARR, doanh thu kỳ này vs kỳ trước
-- **Growth**: Số khách hàng mới, churn rate, net revenue retention
-- **Operations**: Số ticket hỗ trợ, uptime, SLA compliance
-- **Team**: Headcount, hiring pipeline, employee satisfaction
-- **Product**: Features shipped, bugs, user feedback themes
+### Bước 1: COLLECT — Thu thập Dữ liệu
+```
+// turbo
+Actor: Data Analyst + Financial Analyst
+Sources:
+├── COMPANY_CONTEXT.md (KPIs section)
+├── Từng phòng ban → memory/reports/ (weekly/monthly reports)
+├── Người dùng cung cấp (nếu có data mới)
 
-### Bước 2: Phân tích theo Framework RAG (Red/Amber/Green)
-Với mỗi metric, đánh giá:
-- 🟢 **Green**: Đạt hoặc vượt target
-- 🟡 **Amber**: Gần target nhưng cần chú ý
-- 🔴 **Red**: Dưới target, cần hành động ngay
+Metrics cần thu thập:
+├── Revenue: MRR, ARR, Revenue growth %, Net Revenue Retention
+├── Growth: New customers, Signups, Activation rate, Churn rate
+├── Efficiency: CAC, LTV:CAC, Burn Multiple, Gross Margin
+├── Product: DAU/MAU, Feature adoption, NPS, CSAT
+├── Operations: Uptime, Support tickets, FRT, Resolution time
+├── People: Headcount, Open positions, Attrition, eNPS
+└── Finance: Cash runway, OpEx, CapEx, Budget variance
+```
 
-### Bước 3: Xem xét OKR Progress
-- Đánh giá tiến độ từng Objective
-- Key Results nào đang on-track / at-risk / off-track?
-- Cần điều chỉnh gì?
+### Bước 2: ANALYZE — Phân tích RAG
+```
+// turbo
+Actor: Mỗi phòng ban tự đánh giá metrics của mình
 
-### Bước 4: Highlight & Lowlight
-- **Wins**: 3 thành tựu nổi bật nhất
-- **Challenges**: 3 thách thức lớn nhất
-- **Learnings**: Bài học rút ra
+Rating:
+├── 🟢 Green: ≥100% target → Celebrate, share best practices
+├── 🟡 Amber: 80-99% target → Root cause analysis, action plan
+├── 🔴 Red: <80% target → Immediate intervention, escalation
 
-### Bước 5: Action Items
-- Liệt kê cụ thể: **Việc gì — Ai chịu trách nhiệm — Deadline**
-- Ưu tiên hóa theo Impact × Urgency
+Analysis Framework:
+├── WHAT: Metric nào đang 🟡/🔴?
+├── WHY: Root cause (5 Whys nếu cần)
+├── SO WHAT: Impact nếu không fix?
+└── NOW WHAT: Action plan cụ thể (Who, What, When)
+```
 
-## Output Format
+### Bước 3: OKR CHECK-IN
+```
+// turbo
+Actor: CSO + CEO
+├── Đánh giá tiến độ từng Company OKR (0.0 → 1.0)
+├── Color code: 🟢 On-track / 🟡 At-risk / 🔴 Off-track
+├── Nếu Off-track: Cần thay đổi gì? Thêm resources? Pivot?
+├── Cascade check: Dept OKRs align với Company OKRs?
+```
 
-Trình bày kết quả dưới dạng bảng tổng hợp và bullet points rõ ràng, có thể copy vào slide hoặc report.
+### Bước 4: HIGHLIGHTS & LOWLIGHTS
+```
+// turbo
+Actor: Mỗi Executive báo cáo cho CEO
+
+Format:
+├── 🏆 Top 3 Wins (+ impact cụ thể)
+├── ⚠️ Top 3 Challenges (+ root cause + action)
+├── 💡 Top 1 Insight/Learning
+├── 🔮 Top 1 Risk on horizon
+```
+
+### Bước 5: ACTION & DECIDE
+```
+// turbo
+Actor: CEO + All Executives
+├── Review action items từ review kỳ trước → Hoàn thành chưa?
+├── Quyết định actions mới:
+│   ├── ↗️ ACCELERATE: Đang tốt → đầu tư thêm
+│   ├── 🔧 FIX: Đang xấu → intervention
+│   ├── 🛑 STOP: Đang lãng phí → cắt bỏ
+│   └── 🆕 START: Cơ hội mới → pilot
+├── Mỗi action phải có: Owner + Deadline + Success metric
+Output: Dùng template decision-record.md nếu quyết định lớn
+```
+
+### Bước 6: COMMUNICATE
+```
+// turbo
+Actor: CEO
+├── Tóm tắt cho người dùng (Executive Summary format):
+│   ├── Scorecard tổng (RAG)
+│   ├── Top wins & Top risks
+│   ├── Key decisions made
+│   └── Action items với owners
+├── Lưu vào: strategy-office/ceo/memory/reports/
+```
+
+---
+
+## Output Format theo Loại Review
+
+### Weekly (5 phút đọc)
+```markdown
+## 📅 Weekly Review — [DD/MM/YYYY]
+### Scorecard: 🟢 X | 🟡 Y | 🔴 Z
+### Top Win: [...]
+### Top Risk: [...]
+### Actions: [Who → What → By When]
+```
+
+### Monthly (15 phút đọc)
+> Dùng template `monthly-report.md`
+
+### Quarterly (30 phút đọc)
+> QBR Deck format:
+> 1. Company Scorecard (all metrics)
+> 2. OKR Report Card (scores)
+> 3. Dept-by-dept deep dive
+> 4. Strategic outlook next quarter
+> 5. Resource plan
