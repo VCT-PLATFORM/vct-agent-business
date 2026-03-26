@@ -1,99 +1,39 @@
 ---
-description: Quy trình thực thi tác vụ end-to-end — từ brief đến deliverable hoàn chỉnh
+description: Quy trình thực thi tác vụ end-to-end từ cấp Lãnh đạo đến Chuyên viên
 ---
 
-# Task Execution — Thực thi Tác vụ
+# Task Execution — Quy trình Thực thi Tác vụ (Hệ thống Cấp bậc)
 
-Quy trình chuẩn để biến bất kỳ yêu cầu nào thành deliverable cụ thể, dùng được ngay.
+Quy trình này biến yêu cầu của người dụng thành sản phẩm cuối cùng (Deliverable) thông qua hệ thống ủy quyền chuyên nghiệp.
 
-## Khi nào sử dụng
+## Quy trình 5 Bước
 
-- Khi người dùng yêu cầu tạo output cụ thể (bài đăng, JD, hợp đồng, báo cáo, kế hoạch...)
-- Khi vấn đề có thể giải quyết bằng 1-2 phòng ban chính
-- Bất kỳ tác vụ nào cần deliverable, không chỉ advice
+### Bước 1: Tiếp nhận & Ủy quyền (Executive Level)
+- **Executive (C-suite)** phân tích yêu cầu từ người dùng.
+- Xác định phòng ban chủ trì.
+- Giao mục tiêu (Objectives) cho **Manager** tương ứng.
 
-## Quy trình Thực hiện
+### Bước 2: Lập kế hoạch & Phân công (Manager Level)
+- **Manager** nhận mục tiêu, chia nhỏ thành các tác vụ (Tasks).
+- Phân công cho các **Specialists** phù hợp trong phòng ban.
+- Thiết lập Timeline và tiêu chuẩn chất lượng.
 
-### Bước 1: Brief (Tiếp nhận Yêu cầu)
-Xác nhận với người dùng:
-- **Output mong muốn**: Cụ thể cần gì? (bài đăng, email, JD, hợp đồng...)
-- **Mục tiêu**: Tại sao cần? Để giải quyết vấn đề gì?
-- **Đối tượng**: Ai sẽ đọc/dùng output này?
-- **Constraints**: Budget? Deadline? Tone? Format?
-- **Ví dụ**: Có mẫu reference không?
+### Bước 3: Thực thi Chuyên môn (Specialist Level)
+- **Specialists** thực hiện các tác vụ được giao (VD: Content Writer viết bài, Designer làm ảnh).
+- Tạo ra bản thảo (Draft) v1 hoàn chỉnh, không dùng placeholder.
+- Báo cáo kết quả cho Manager.
 
-> Nếu brief đủ rõ → tiến hành ngay, không hỏi thêm.
-> Quy tắc: **Hành động trước, hỏi khi thực sự thiếu info critical.**
+### Bước 4: Review & Phân tích (Manager Level)
+- **Manager** kiểm tra sản phẩm từ Specialists.
+- Đảm bảo tính nhất quán giữa các phần (VD: Text và Ảnh phải khớp).
+- Nếu chưa đạt → Yêu cầu Specialist sửa lại.
+- Nếu đạt → Gửi bản tổng hợp cho Executive.
 
-### Bước 2: Route (Phân công)
-Xác định:
-- **Phòng ban chủ trì**: Ai tạo deliverable chính?
-- **Sub-role thực thi**: Nhân sự cụ thể nào trong phòng ban?
-- **Phòng ban hỗ trợ**: Ai cần review? (theo Ma trận Phản biện)
+### Bước 5: Phê duyệt & Bàn giao (Executive Level)
+- **Executive** kiểm tra lần cuối dựa trên góc nhìn chiến lược.
+- Nếu đạt → Phê duyệt và bàn giao cho người dùng.
+- Trình bày kết quả dưới dạng: **Bản tóm tắt (Executive Summary)** + **Sản phẩm chi tiết (Deliverables)**.
 
-Ví dụ routing:
-| Yêu cầu | Chủ trì | Sub-role | Hỗ trợ |
-|----------|---------|----------|--------|
-| "Viết bài Facebook" | CMO | Social Media Manager | Data (timing) |
-| "Tuyển developer" | CHRO | Recruiter | CTO (tech requirements) |
-| "Review hợp đồng" | Legal | Corporate Counsel | CFO (financial terms) |
-| "Lên ngân sách Q2" | CFO | Financial Analyst | CEO + tất cả dept heads |
-| "Thiết kế API mới" | CTO | Solution Architect | COO (ops impact) |
-
-### Bước 3: Execute (Thực thi)
-Sub-role thực thi tạo deliverable v1:
-- Sử dụng **Deliverable Template** từ SKILL.md tương ứng
-- Đảm bảo output **hoàn chỉnh**, không phải outline hay gợi ý
-- Format chuyên nghiệp, sẵn sàng dùng
-
-### Bước 4: Review (Kiểm tra Chất lượng)
-
-**Self-review (phòng ban chủ trì):**
-- [ ] Đúng mục tiêu brief?
-- [ ] Tone phù hợp đối tượng?
-- [ ] Không có lỗi factual?
-- [ ] Format chuyên nghiệp?
-
-**Cross-review (phòng ban hỗ trợ):**
-- CFO kiểm tra budget/cost aspects
-- Legal kiểm tra compliance/risk
-- Data kiểm tra số liệu/claims
-- CTO kiểm tra technical feasibility
-
-### Bước 5: Refine (Chỉnh sửa)
-Nếu review phát hiện vấn đề:
-- Liệt kê issues
-- Chỉnh sửa deliverable
-- Re-review nếu cần
-
-### Bước 6: Deliver (Bàn giao)
-Trình bày deliverable với format:
-
-```markdown
-## ✅ Deliverable: [Tên output]
-
-### Được tạo bởi: [Phòng ban] → [Sub-role]
-### Đã review bởi: [Phòng ban hỗ trợ]
-
----
-[DELIVERABLE CONTENT Ở ĐÂY]
----
-
-### 📝 Ghi chú:
-- [Assumptions đã đặt]
-- [Trade-offs đã chọn]
-
-### ➡️ Hành động Tiếp theo:
-1. [Bước kế tiếp — người dùng cần làm gì]
-2. [...]
-
-### 🔄 Cần chỉnh sửa?
-Hãy cho tôi biết cần thay đổi gì, tôi sẽ cập nhật ngay.
-```
-
-## Nguyên tắc Thực thi
-
-1. **Completeness > Speed** — Trả output hoàn chỉnh, không nửa vời
-2. **Professional quality** — Đạt chuẩn trình cho sếp/khách hàng
-3. **Iterate fast** — Nếu người dùng muốn sửa, chỉnh ngay không phân trần
-4. **Context-aware** — Nhớ bối cảnh VCT Platform, thị trường VN, ngành SaaS
+## Nguyên tắc Vận hành
+- **Phân cấp**: Chuyên viên làm việc chi tiết, Quản lý giữ tiến độ/chất lượng, Lãnh đạo duyệt mục tiêu/kết quả.
+- **Actionable**: Deliverable cuối cùng phải ở trạng thái sẵn sàng sử dụng (Ready-to-use).
