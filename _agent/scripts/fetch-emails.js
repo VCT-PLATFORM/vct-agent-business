@@ -60,9 +60,9 @@ async function fetchEmails() {
             await connection.openBox('INBOX');
 
             const date = new Date();
-            date.setDate(date.getDate() - 1);
+            date.setDate(date.getDate() - 30);
             
-            const searchCriteria = [['SINCE', date.toISOString()], ['UNSEEN']];
+            const searchCriteria = [['SINCE', date.toISOString()]];
             const fetchOptions = { bodies: ['HEADER', 'TEXT', ''], markSeen: false };
 
             console.log(`📥 Đang quét email...`);
@@ -97,7 +97,12 @@ async function fetchEmails() {
                     if (!fs.existsSync(invoiceDir)) fs.mkdirSync(invoiceDir, { recursive: true });
                     
                     parsed.attachments.forEach(attachment => {
-                        const safeFilename = `${mailDate.getTime()}_${attachment.filename.replace(/[^a-zA-Z0-9.-]/g, '_')}`;
+                        const dayStr = String(mailDate.getDate()).padStart(2, '0');
+                        const formattedDate = `${year}-${month}-${dayStr}`;
+                        // Giữ lại tiếng Việt, chỉ xóa các ký tự cấm trong Windows
+                        const cleanFilename = attachment.filename.replace(/[<>:"/\\|?*\x00-\x1F]/g, '_');
+                        const safeFilename = `${formattedDate}_${cleanFilename}`;
+                        
                         const attachPath = path.join(invoiceDir, safeFilename);
                         fs.writeFileSync(attachPath, attachment.content);
                         markdownContent += `\n- 📎 **File Hóa đơn đã tải về**: \`invoices/${year}/${quarter}/${month}/${safeFilename}\``;
