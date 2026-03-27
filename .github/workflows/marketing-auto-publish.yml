@@ -1,0 +1,30 @@
+name: Auto-Publish Social Media
+
+on:
+  schedule:
+    # Chạy mỗi ngày vào lúc 02:00 UTC (Tương đương 09:00 AM giờ Việt Nam)
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+    # Cho phép kích hoạt chạy bằng tay trên web GitHub (để Test)
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+
+    - name: Install Dependencies
+      run: npm install axios form-data dotenv
+
+    - name: Run Auto-Publish Script
+      env:
+        FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+        FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+      run: node _agent/scripts/github-auto-publish.js
