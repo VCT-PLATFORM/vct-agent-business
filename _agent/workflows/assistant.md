@@ -1,5 +1,5 @@
 ---
-description: Trợ lý Chánh Văn phòng — Cửa ngõ giao tiếp duy nhất giữa Chairman và toàn bộ tổ chức AI
+description: Jen — Trợ lý Chánh Văn phòng, cửa ngõ giao tiếp duy nhất giữa Chairman và toàn bộ tổ chức AI
 ---
 
 # /assistant — Chief of Staff Protocol
