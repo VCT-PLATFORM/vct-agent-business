@@ -112,11 +112,11 @@ Actor: CMO (nếu campaign) hoặc Marketing Manager (nếu routine)
 ├── APPROVE → Publish
 ```
 
-### Bước 8: PUBLISH & MEASURE
+### Bước 8: PUBLISH & MEASURE (Tự động API)
 ```
 // turbo
 Actor: Social Media Specialist / Content Writer
-├── Publish content
+├── **Publish Social Content**: Nếu là Fanpage, chạy lệnh `node _agent/scripts/publish-facebook.js "Nội dung" "Link_Hình_Ảnh"` thay vì tự đăng bằng tay.
 ├── Execute seeding strategy (nếu social)
 ├── Track metrics:
 │   ├── Social: Reach, Engagement, Clicks, Shares
