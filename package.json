@@ -1,7 +1,13 @@
 {
   "dependencies": {
+    "axios": "^1.13.6",
+    "chrono-node": "^2.9.0",
     "dotenv": "^17.3.1",
+    "form-data": "^4.0.5",
+    "googleapis": "^171.4.0",
     "imap-simple": "^5.1.0",
-    "mailparser": "^3.9.6"
+    "mailparser": "^3.9.6",
+    "node-cron": "^4.2.1",
+    "node-telegram-bot-api": "^0.67.0"
   }
 }
