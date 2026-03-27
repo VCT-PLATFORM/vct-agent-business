@@ -15,7 +15,8 @@ const { simpleParser } = require('mailparser');
 const fs = require('fs');
 const path = require('path');
 
-const configs = [
+async function fetchEmails() {
+    const configs = [
         {
             name: 'main',
             prefix: 'email_report',
@@ -84,7 +85,26 @@ const configs = [
                 markdownContent += `- **Thời gian**: ${parsed.date}\n`;
                 markdownContent += `### Nội dung:\n`;
                 markdownContent += `${parsed.text ? parsed.text.trim().substring(0, 2000) : 'Không có nội dung text'}\n`;
-                markdownContent += `---\n\n`;
+                
+                // --- XỬ LÝ ĐÍNH KÈM (HÓA ĐƠN) ---
+                if (context.name === 'invoice' && parsed.attachments && parsed.attachments.length > 0) {
+                    const mailDate = parsed.date || new Date();
+                    const year = mailDate.getFullYear();
+                    const quarter = `Q${Math.floor((mailDate.getMonth() + 3) / 3)}`;
+                    const month = String(mailDate.getMonth() + 1).padStart(2, '0');
+                    
+                    const invoiceDir = path.join(__dirname, `../shared_knowledge/invoices/${year}/${quarter}/${month}`);
+                    if (!fs.existsSync(invoiceDir)) fs.mkdirSync(invoiceDir, { recursive: true });
+                    
+                    parsed.attachments.forEach(attachment => {
+                        const safeFilename = `${mailDate.getTime()}_${attachment.filename.replace(/[^a-zA-Z0-9.-]/g, '_')}`;
+                        const attachPath = path.join(invoiceDir, safeFilename);
+                        fs.writeFileSync(attachPath, attachment.content);
+                        markdownContent += `\n- 📎 **File Hóa đơn đã tải về**: \`invoices/${year}/${quarter}/${month}/${safeFilename}\``;
+                    });
+                }
+                
+                markdownContent += `\n---\n\n`;
             }
 
             const dirPath = path.join(__dirname, '../shared_knowledge/emails');
