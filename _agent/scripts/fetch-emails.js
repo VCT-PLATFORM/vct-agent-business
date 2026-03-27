@@ -15,89 +15,93 @@ const { simpleParser } = require('mailparser');
 const fs = require('fs');
 const path = require('path');
 
-const config = {
-    imap: {
-        user: process.env.IMAP_USER,
-        password: process.env.IMAP_PASSWORD,
-        host: 'imap.gmail.com', // Cấu hình cho Gmail
-        port: 993,
-        tls: true,
-        authTimeout: 3000,
-        tlsOptions: { rejectUnauthorized: false }
-    }
-};
+const configs = [
+        {
+            name: 'main',
+            prefix: 'email_report',
+            imap: {
+                user: process.env.IMAP_USER,
+                password: process.env.IMAP_PASSWORD,
+                host: 'imap.gmail.com',
+                port: 993,
+                tls: true,
+                authTimeout: 3000,
+                tlsOptions: { rejectUnauthorized: false }
+            }
+        },
+        {
+            name: 'invoice',
+            prefix: 'invoice_report',
+            imap: {
+                user: process.env.INVOICE_IMAP_USER,
+                password: process.env.INVOICE_IMAP_PASSWORD,
+                host: 'imap.gmail.com',
+                port: 993,
+                tls: true,
+                authTimeout: 3000,
+                tlsOptions: { rejectUnauthorized: false }
+            }
+        }
+    ];
 
-async function fetchEmails() {
-    if (!process.env.IMAP_USER || !process.env.IMAP_PASSWORD) {
-        console.error('❌ Lỗi: Chưa cung cấp IMAP_USER hoặc IMAP_PASSWORD trong file .env');
-        console.error('Hướng dẫn tạo App Password: https://myaccount.google.com/apppasswords');
-        return;
-    }
-
-    console.log('🔄 Đang kết nối tới Gmail của Chủ tịch...');
-    
-    try {
-        const connection = await imaps.connect(config);
-        await connection.openBox('INBOX');
-
-        // Tìm email trong 24h qua (hoặc 1 tuần tùy nhu cầu)
-        const date = new Date();
-        date.setDate(date.getDate() - 1); // 1 ngày trước
-        
-        const searchCriteria = [
-            ['SINCE', date.toISOString()],
-            ['UNSEEN'] // Chỉ đọc email chưa đọc
-        ];
-        
-        const fetchOptions = {
-            bodies: ['HEADER', 'TEXT', ''],
-            markSeen: false // Không đánh dấu là đã đọc để bảo vệ mailbox của sếp
-        };
-
-        console.log(`📥 Đang quét email (từ ${date.toLocaleDateString()})...`);
-        const messages = await connection.search(searchCriteria, fetchOptions);
-        
-        if (messages.length === 0) {
-            console.log('✅ Không có email mới nào cần xử lý.');
-            connection.end();
-            return;
+    for (const context of configs) {
+        if (!context.imap.user || !context.imap.password) {
+            if (context.name === 'main') {
+                console.error('❌ Lỗi: Chưa cấu hình IMAP_USER / IMAP_PASSWORD.');
+            }
+            continue; // Skip if config is missing (e.g. invoice not set up yet)
         }
 
-        let markdownContent = `# 📬 BẢN TIN EMAIL (Tự động tải về lúc ${new Date().toLocaleString()})\n\n`;
+        console.log(`\n🔄 Đang kết nối tới Hòm thư [${context.name.toUpperCase()}] (${context.imap.user})...`);
+        
+        try {
+            const connection = await imaps.connect({ imap: context.imap });
+            await connection.openBox('INBOX');
 
-        for (const message of messages) {
-            const allBytes = message.parts.find(p => p.which === '').body;
-            const parsed = await simpleParser(allBytes);
+            const date = new Date();
+            date.setDate(date.getDate() - 1);
             
-            markdownContent += `## Lệnh: Nhận từ [${parsed.from.text}]\n`;
-            markdownContent += `- **Chủ đề (Subject)**: ${parsed.subject}\n`;
-            markdownContent += `- **Thời gian**: ${parsed.date}\n`;
-            markdownContent += `### Nội dung:\n`;
-            markdownContent += `${parsed.text ? parsed.text.trim().substring(0, 2000) : 'Không có nội dung text'}\n`; // Cắt 2000 ký tự tránh tràn ram
-            markdownContent += `---\n\n`;
-        }
+            const searchCriteria = [['SINCE', date.toISOString()], ['UNSEEN']];
+            const fetchOptions = { bodies: ['HEADER', 'TEXT', ''], markSeen: false };
 
-        // Lưu vào file Markdown
-        const dirPath = path.join(__dirname, '../shared_knowledge/emails');
-        if (!fs.existsSync(dirPath)) {
-            fs.mkdirSync(dirPath, { recursive: true });
-        }
-        
-        const filename = `email_report_${Date.now()}.md`;
-        const filepath = path.join(dirPath, filename);
-        
-        fs.writeFileSync(filepath, markdownContent, 'utf-8');
-        console.log(`\n🎉 THÀNH CÔNG! Đã tải ${messages.length} email mới.`);
-        console.log(`📁 Nội dung đã được lưu tại: ${filepath}`);
-        console.log(`👉 Chuyển qua chat và gõ "/email-triage" để Jen (Chief of Staff) xử lý!`);
+            console.log(`📥 Đang quét email...`);
+            const messages = await connection.search(searchCriteria, fetchOptions);
+            
+            if (messages.length === 0) {
+                console.log(`✅ Hòm thư [${context.name.toUpperCase()}] không có email mới.`);
+                connection.end();
+                continue;
+            }
 
-        connection.end();
-    } catch (err) {
-        console.error('❌ Lỗi xử lý IMAP:', err.message);
-        if(err.message.includes('Web login required')) {
-            console.error('💡 Chủ tịch phải dùng Mật khẩu Ứng dụng (App Password), KHÔNG ĐƯỢC dùng mật khẩu gốc Gmail.');
+            let markdownContent = `# 📬 BẢN TIN [${context.name.toUpperCase()}] (Tải về lúc ${new Date().toLocaleString()})\n\n`;
+
+            for (const message of messages) {
+                const allBytes = message.parts.find(p => p.which === '').body;
+                const parsed = await simpleParser(allBytes);
+                
+                markdownContent += `## Từ: [${parsed.from.text}]\n`;
+                markdownContent += `- **Chủ đề (Subject)**: ${parsed.subject}\n`;
+                markdownContent += `- **Thời gian**: ${parsed.date}\n`;
+                markdownContent += `### Nội dung:\n`;
+                markdownContent += `${parsed.text ? parsed.text.trim().substring(0, 2000) : 'Không có nội dung text'}\n`;
+                markdownContent += `---\n\n`;
+            }
+
+            const dirPath = path.join(__dirname, '../shared_knowledge/emails');
+            if (!fs.existsSync(dirPath)) fs.mkdirSync(dirPath, { recursive: true });
+            
+            const filename = `${context.prefix}_${Date.now()}.md`;
+            const filepath = path.join(dirPath, filename);
+            
+            fs.writeFileSync(filepath, markdownContent, 'utf-8');
+            console.log(`🎉 Đã tải ${messages.length} email từ [${context.name.toUpperCase()}]. Lưu tại: ${filename}`);
+
+            connection.end();
+        } catch (err) {
+            console.error(`❌ Lỗi kết nối hòm thư [${context.name}]:`, err.message);
         }
     }
+
 }
 
 fetchEmails();
