@@ -90,8 +90,8 @@
 | Layer          | Technology                              |
 | -------------- | --------------------------------------- |
 | **Frontend**   | Next.js, React, TypeScript, TailwindCSS |
-| **Backend**    | NestJS, TypeScript                      |
-| **Database**   | PostgreSQL (Supabase)                   |
+| **Backend** | NestJS, TypeScript |
+| **Database** | PostgreSQL (Tự host / Railway) |
 | **Messaging**  | NATS JetStream                          |
 | **Hosting**    | Vercel (Frontend), Railway/Supabase (Backend) |
 | **CI/CD**      | GitHub Actions                          |
