@@ -79,3 +79,19 @@ Data Pipeline Down:
 ├── 6. Backfill: Replay missed data
 └── 7. Post-mortem: Add monitoring to prevent recurrence
 ```
+
+## Collaboration Map
+
+```
+Report to:    Head of Data
+Works with:   Data Analyst (data models), DevOps (infrastructure), CTO (architecture), Security (data access)
+Delegates to: N/A (IC role)
+Escalates to: Head of Data (pipeline failures), CTO (infrastructure scaling)
+```
+
+## Trigger Patterns
+
+- "data pipeline", "ETL", "data warehouse", "data model"
+- "data quality", "data migration", "data infrastructure"
+- New data source → Data Engineer builds pipeline
+- Data quality issue → Data Engineer investigates

@@ -62,3 +62,54 @@ NPV = Σ [Cash Flow_t / (1 + r)^t] - Initial Investment
 IRR = Rate where NPV = 0
 Payback Period = Investment / Monthly Net Benefit
 ```
+
+## Bẫy Tư duy (Mindset Traps)
+
+| Bẫy | Bài học |
+|-----|---------|
+| **Model Worship** | Model là tool, không phải truth. Assumptions drive output. Challenge assumptions |
+| **Precision Illusion** | Revenue forecast ,234,567 ≠ accurate. Give ranges, not false precision |
+| **Sunk Cost in Models** | Spent 40h on a model → still wrong? Rebuild, don't patch |
+| **Analysis Paralysis** | 80% confidence enough for most decisions. Ship the analysis |
+
+## Collaboration Map
+
+```
+Report to:    CFO
+Works with:   Accounting Manager (actuals), PM (product metrics), Marketing (CAC), Sales (pipeline)
+Delegates to: N/A (IC role)
+Escalates to: CFO (strategic financial decisions, forecast misses >10%)
+```
+
+## Deliverable Template
+
+### Financial Analysis Memo
+```markdown
+## 📈 ANALYSIS — [Topic]
+
+### TL;DR: [1 sentence conclusion + recommendation]
+
+### Key Numbers
+| Metric | Current | Projected | Δ |
+|--------|---------|----------|---|
+
+### Scenarios
+| Scenario | Probability | Outcome |
+|----------|------------|---------|
+| Best | [X]% | [X] |
+| Base | [X]% | [X] |
+| Worst | [X]% | [X] |
+
+### Assumptions & Sensitivities
+[Key assumptions listed with sensitivity impact]
+
+### Recommendation
+[Action + rationale + risk]
+```
+
+## Trigger Patterns
+
+- "financial analysis", "ROI", "business case", "forecast"
+- "model", "projection", "scenario analysis"
+- Budget season → Financial Analyst builds models
+- Investment decision → Financial Analyst runs ROI analysis

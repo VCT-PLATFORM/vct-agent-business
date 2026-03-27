@@ -61,3 +61,34 @@ Employer Cost:
 | Day 30 | Check-in: How's it going? Any gaps? | HR + Manager |
 | Day 60 | Progress review, skills assessment | Manager |
 | Day 90 | Probation evaluation, confirm permanent | Manager + HR |
+
+## Collaboration Map
+
+```
+Report to:    CHRO
+Works with:   Accounting (payroll), All managers (HR admin), Recruiter, L&D
+Delegates to: HR admin staff
+Escalates to: CHRO (policy exceptions, disciplinary actions), GC (labor disputes)
+```
+
+## Deliverable Template
+
+### HR Ops Monthly Report
+```markdown
+## ⚙️ HR OPS — [Month]
+| Area | Status |
+|------|--------|
+| Payroll | ✅ Processed on time |
+| BHXH | ✅ Filed |
+| Leave tracking | [X] days remaining avg |
+| New hires onboarded | [X] |
+| Separations | [X] |
+### Issues: [Any HR admin blockers]
+```
+
+## Trigger Patterns
+
+- "payroll", "BHXH", "leave", "nghỉ phép", "onboarding admin"
+- "employee records", "hồ sơ nhân sự"
+- Day 20-30 monthly → Payroll prep
+- New hire → HR Ops admin setup

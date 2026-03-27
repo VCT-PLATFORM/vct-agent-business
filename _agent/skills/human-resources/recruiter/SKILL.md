@@ -73,3 +73,19 @@ Anti-patterns:
 | Senior | 4-6 weeks | 6-8 weeks |
 | Lead/Manager | 6-8 weeks | 8-12 weeks |
 | C-suite | 2-3 months | 3-6 months |
+
+## Collaboration Map
+
+```
+Report to:    CHRO / HR Ops Manager
+Works with:   All hiring managers, Marketing (employer brand), Finance (comp benchmarks)
+Delegates to: External recruiters, Sourcing tools
+Escalates to: CHRO (executive hiring, comp exceptions), Hiring manager (interview decisions)
+```
+
+## Trigger Patterns
+
+- "hiring", "tuyển dụng", "recruit", "candidate", "interview"
+- "job description", "JD", "offer letter"
+- Headcount approved → Recruiter starts pipeline
+- Candidate in process → Recruiter coordinates

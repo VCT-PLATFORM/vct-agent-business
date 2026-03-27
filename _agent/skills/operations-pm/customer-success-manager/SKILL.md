@@ -68,3 +68,43 @@ Expansion (Ongoing): Upsell → Cross-sell → Advocacy
 ### 5. Next Steps
 | Action | Owner | Date |
 ```
+
+## Collaboration Map
+
+```
+Report to:    COO
+Works with:   AE (handoff, upsell), Support Lead (escalations), PM (product feedback), Data (health scores)
+Delegates to: Support team (L1 tasks)
+Escalates to: COO (churn risk), AE (expansion opportunity), CEO (top 10 customer issues)
+```
+
+## Deliverable Template
+
+### Customer Health Report
+```markdown
+## 📋 CUSTOMER HEALTH — [Month]
+
+### Portfolio: [X] customers, [X]M ARR
+
+### Health Distribution
+| Health | Count | % | MRR |
+|--------|-------|---|-----|
+| 🟢 Healthy | | | |
+| 🟡 At-risk | | | |
+| 🔴 Critical | | | |
+
+### Key Actions
+| Customer | Health | Issue | Action | Deadline |
+|----------|--------|-------|--------|---------|
+
+### Churn This Month: [X] ($[X] ARR)
+### NPS: [X] (vs target >50)
+### Renewals Next Month: [X] customers, $[X] ARR
+```
+
+## Trigger Patterns
+
+- "customer success", "churn", "retention", "NPS", "health score"
+- "QBR", "onboarding", "renewal"
+- Customer health drops → CSM intervention
+- 60 days before renewal → CSM starts conversation

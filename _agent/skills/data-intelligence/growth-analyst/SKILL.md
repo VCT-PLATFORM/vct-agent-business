@@ -98,3 +98,19 @@ Reading Cohort Tables:
 | **Over-optimizing locally** | Button color +2% is noise. Fix activation flow for +50% |
 | **Growth without retention** | Acquiring users who churn in 30 days = expensive nothing |
 | **Ignoring qualitative data** | Numbers say WHAT. User interviews say WHY. You need both |
+
+## Collaboration Map
+
+```
+Report to:    Head of Data
+Works with:   PM (product experiments), Marketing (campaign analytics), Sales (funnel analysis)
+Delegates to: N/A (IC role)
+Escalates to: Head of Data (strategic experiment design), PM (experiment implementation)
+```
+
+## Trigger Patterns
+
+- "growth", "experiment", "A/B test", "conversion", "funnel"
+- "hypothesis", "retention", "activation"
+- Experiment proposed → Growth Analyst designs + analyzes
+- Funnel drop detected → Growth Analyst investigates

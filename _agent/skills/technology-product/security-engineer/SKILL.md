@@ -67,3 +67,41 @@ Defense in Depth:
 | NĐ 13/2023 (VN PDPA) | All VN customers | Personal data protection |
 | GDPR | EU customers | Data processing, DPO, DPIA |
 | PCI DSS | Payment handling | Cardholder data security |
+
+## Collaboration Map
+
+```
+Report to:    CTO
+Works with:   DevOps (infra security), All devs (secure coding), Compliance Officer (regulations)
+Delegates to: N/A (IC role)
+Escalates to: CTO (security incidents, major vulnerabilities), GC (data breach legal)
+```
+
+## Deliverable Template
+
+### Security Assessment Report
+```markdown
+## 🔐 SECURITY REPORT — [Quarter]
+
+### Overall Risk: [🟢/🟡/🔴]
+
+### Vulnerabilities
+| Severity | Open | Closed | New |
+|----------|------|--------|-----|
+| Critical | | | |
+| High | | | |
+| Medium | | | |
+
+### Compliance: SOC2/ISO 27001 status
+### Incidents: [X] this quarter
+### Pen Test Results: [Summary]
+### Recommendations
+1. [Action + Priority + Owner]
+```
+
+## Trigger Patterns
+
+- "security", "bảo mật", "vulnerability", "penetration test"
+- "data breach", "access control", "encryption"
+- Security incident → Security Engineer leads response
+- Code review security flag → Security Engineer reviews

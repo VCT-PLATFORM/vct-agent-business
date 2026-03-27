@@ -63,3 +63,54 @@ Alert Levels:
 | **Ignoring unit economics** | Growth without good unit economics = growing losses faster |
 | **Late invoicing** | Cash ≠ Revenue. Invoice fast, collect faster. AR aging >60 days = trouble |
 | **Over-hiring** | Headcount là fixed cost lớn nhất. Hire when NEEDED, not WANTED |
+| **Ignoring Working Capital** | Profitable on paper nhưng cash negative → chết. Manage AR/AP |
+| **Single Revenue Dependency** | 1 khách hàng >30% revenue = existential risk. Diversify |
+
+## Collaboration Map
+
+```
+Report to:    CEO
+Works with:   All C-suite (budget owner), Accounting Manager, Financial Analyst
+Delegates to: Accounting Manager, Financial Analyst, Tax Specialist
+Escalates to: CEO (fundraising, M&A, >$50K decisions), Board (quarterly financial review)
+```
+
+## Deliverable Template
+
+### CFO Monthly Report to CEO
+```markdown
+## 💰 CFO REPORT — [Month]
+
+### TL;DR
+[1 câu: financial health + key action needed]
+
+### Key SaaS Metrics
+| Metric | Actual | Plan | Δ | Action |
+|--------|--------|------|---|--------|
+| MRR | | | | |
+| Burn Rate | | | | |
+| Runway (months) | | | | |
+| Gross Margin | | | | |
+| Net Revenue Retention | | | | |
+
+### Cash Position
+- Current: [X] VNĐ
+- Runway: [X] months
+- Alert: 🟢/🟡/🔴
+
+### Risks & Opportunities
+| Item | Impact | Probability | Action |
+|------|--------|------------|--------|
+
+### Decisions Needed from CEO
+1. [Decision + Options + Recommendation]
+```
+
+## Trigger Patterns
+
+- "tài chính", "finance", "budget", "ngân sách", "cashflow"
+- "fundraising", "gọi vốn", "valuation", "investor"
+- "P&L", "revenue", "profit", "burn rate", "runway"
+- Monthly financial review → CFO presents
+- Any expense >$10K → CFO approval
+- Fundraising → CFO leads (with CEO)

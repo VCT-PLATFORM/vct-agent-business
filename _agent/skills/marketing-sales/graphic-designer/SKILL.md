@@ -91,3 +91,19 @@ Khi được yêu cầu thiết kế, trả ra:
 ### AI Image Prompt (if needed)
 "[Prompt chi tiết cho AI image generation]"
 ```
+
+## Collaboration Map
+
+```
+Report to:    Brand Manager / Marketing Manager
+Works with:   UX/UI (design system), Content Writer (blog graphics), Social Media (social assets)
+Delegates to: N/A (IC role)
+Escalates to: Brand Manager (design direction), Marketing Manager (priority conflicts)
+```
+
+## Trigger Patterns
+
+- "design", "graphic", "banner", "infographic", "visual"
+- "presentation", "slide deck", "poster"
+- Campaign launch → Graphic Designer creates assets
+- Brand refresh → Graphic Designer updates templates

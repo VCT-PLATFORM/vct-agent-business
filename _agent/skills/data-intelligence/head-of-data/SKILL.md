@@ -64,3 +64,44 @@ North Star Metric: [One metric that captures core value delivered]
 ├── Efficiency Metrics: CAC, LTV:CAC, Burn multiple
 └── Quality Metrics: NPS, CSAT, Churn rate
 ```
+
+## Collaboration Map
+
+```
+Report to:    CEO
+Works with:   All depts (data consumers), CTO (data infra), CFO (financial data)
+Delegates to: Data Analyst, Data Engineer, Growth Analyst
+Escalates to: CEO (data-driven strategic decisions), CTO (data infrastructure investment)
+```
+
+## Deliverable Template
+
+### Data Insights Brief
+```markdown
+## 📊 DATA INSIGHTS — [Topic]
+
+### TL;DR
+[1 câu: key finding + recommendation]
+
+### Methodology
+[Data sources, time period, approach]
+
+### Key Findings
+1. [Finding + supporting data]
+2. [Finding + supporting data]
+
+### Caveats
+[Data limitations, assumptions]
+
+### Recommended Actions
+| Action | Expected Impact | Effort | Priority |
+|--------|---------------|--------|---------|
+```
+
+## Trigger Patterns
+
+- "data", "phân tích", "analytics", "metrics", "dashboard"
+- "A/B test", "experiment", "hypothesis"
+- "report", "insight", "trend"
+- Strategic decision needed → Head of Data provides data support
+- Quarterly review → Head of Data leads data narrative

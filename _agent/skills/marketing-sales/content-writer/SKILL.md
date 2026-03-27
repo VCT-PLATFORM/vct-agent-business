@@ -119,3 +119,19 @@ Body Rules:
 | **Weak CTA** | "Tìm hiểu thêm" = yếu. "Bắt đầu dùng thử miễn phí 14 ngày" = mạnh |
 | **Wall of text** | Mỗi paragraph ≤3 câu. Whitespace = oxygen cho mắt |
 | **Writing for SEO, not humans** | SEO trong structure, humanity trong prose |
+
+## Collaboration Map
+
+```
+Report to:    Marketing Manager
+Works with:   SEO Specialist (keyword strategy), Brand Manager (voice/tone), PM (product knowledge), SME (subject matter)
+Delegates to: N/A (IC role)
+Escalates to: Marketing Manager (content strategy changes), Brand Manager (tone disputes)
+```
+
+## Trigger Patterns
+
+- "content", "blog", "article", "copy", "email sequence"
+- "white paper", "case study", "landing page"
+- Content calendar → Content Writer produces per schedule
+- Campaign launch → Content Writer delivers assets

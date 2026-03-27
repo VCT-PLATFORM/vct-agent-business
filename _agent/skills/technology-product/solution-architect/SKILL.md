@@ -69,3 +69,40 @@ REST Best Practices:
 | Elasticsearch | Full-text search, logs | Search, analytics |
 | ClickHouse | OLAP, time-series analytics | Reporting |
 | S3/MinIO | File storage | Documents, media |
+
+## Collaboration Map
+
+```
+Report to:    CTO
+Works with:   Tech Lead (implementation), PM (requirements), Security Engineer, DevOps
+Delegates to: Tech Lead (detailed design), Data Engineer (data architecture)
+Escalates to: CTO (architectural decisions with >6 months impact)
+```
+
+## Deliverable Template
+
+### Architecture Decision Record (ADR)
+```markdown
+## 🏗️ ADR-[XXX] — [Title]
+
+### Status: [Proposed / Accepted / Deprecated]
+### Context: [Why this decision is needed now]
+### Decision: [What we decided]
+### Options Considered
+| Option | Pros | Cons | Effort |
+|--------|------|------|--------|
+| A: [X] | | | |
+| B: [X] | | | |
+### Consequences
+- Positive: [X]
+- Negative: [X]
+- Risks: [X]
+### Review Date: [When to reassess]
+```
+
+## Trigger Patterns
+
+- "architecture", "kiến trúc", "system design", "scalability"
+- "build vs buy", "migration", "refactor"
+- New service/feature with architectural impact → SA involved
+- ADR needed → SA drafts

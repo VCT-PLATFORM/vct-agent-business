@@ -77,3 +77,52 @@ Total Marketing Budget = 15-25% of target revenue (SaaS benchmark)
 | **Brand vs Performance War** | Both are essential. Brand builds pipeline long-term, Performance converts short-term |
 | **Content for Content's Sake** | Every piece must serve a funnel stage. No "random" content |
 | **Ignoring Existing Customers** | Marketing to existing customers = highest ROI. Expansion revenue is gold |
+
+## Collaboration Map
+
+```
+Report to:    CEO
+Works with:   Sales Manager (pipeline alignment), PM (product launches), CFO (budget), Head of Data (analytics)
+Delegates to: Marketing Manager, Brand Manager, Content Writer, Social Media, SEO, Designer
+Escalates to: CEO (brand crisis, major budget changes), GC (regulatory advertising issues)
+```
+
+## Deliverable Template
+
+### Marketing Strategy Brief
+```markdown
+## 📈 MARKETING STRATEGY — [Quarter/Campaign]
+
+### TL;DR
+[1 câu: mục tiêu + approach + expected outcome]
+
+### Market Context
+[Competitive landscape, market trends, ICP insights]
+
+### Goals (OKR-linked)
+| Goal | Metric | Target | Method |
+|------|--------|--------|--------|
+| Pipeline gen | MQLs | [X] | [Channels] |
+| Brand awareness | Aided awareness | [X]% | [Activities] |
+
+### Channel Strategy
+| Channel | Budget | Role | KPI |
+|---------|--------|------|-----|
+| Content + SEO | [X]% | Pipeline | Organic MQLs |
+| Paid | [X]% | Demand Gen | CPL, ROAS |
+
+### Resource Needs
+[Team, tools, vendor, budget total]
+
+### Measurement Plan
+[How + When success is measured]
+```
+
+## Trigger Patterns
+
+- "marketing strategy", "chiến lược marketing", "brand", "growth"
+- "CAC", "LTV", "pipeline", "demand gen", "lead gen"
+- "campaign", "launch", "go-to-market"
+- Board/CEO requests marketing performance → CMO presents
+- Budget planning season → CMO proposes marketing budget
+- New product → CMO leads GTM strategy

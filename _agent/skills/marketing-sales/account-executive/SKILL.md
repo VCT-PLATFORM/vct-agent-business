@@ -71,3 +71,29 @@ Day 10: Email 3 (Breakup email — "Last attempt")
 Day 14: LinkedIn comment/engage their content
 Day 21: Email 4 (New trigger/news about their company)
 ```
+
+## Bẫy Tư duy (Mindset Traps)
+
+| Bẫy | Bài học |
+|-----|---------|
+| **Happy Ears** | Customer says "Sounds great!" ≠ They'll buy. Validate with next steps |
+| **Feature Selling** | Sell outcomes, not features. "Giảm 40% thời gian" > "Có tính năng X" |
+| **Single-threaded** | Only talk to 1 person = deal dies when they leave. Multi-thread always |
+| **Discounting First** | Discount = last resort. Add value first. Give discount = train customer to always ask |
+| **Ignoring Lost Deals** | Lost deal analysis = goldmine. WHY did they say no? |
+
+## Collaboration Map
+
+```
+Report to:    Sales Manager
+Works with:   Marketing (leads), CSM (handoff), Contract Specialist (agreements), Support (customer issues)
+Delegates to: N/A (IC role)
+Escalates to: Sales Manager (discount approval, deal strategy), CEO (enterprise/strategic deals)
+```
+
+## Trigger Patterns
+
+- "deal", "prospect", "demo", "proposal", "close"
+- "cold outreach", "follow-up", "negotiation"
+- MQL assigned → AE follows up within SLA
+- Deal progresses → AE manages pipeline

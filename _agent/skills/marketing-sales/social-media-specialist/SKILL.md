@@ -63,3 +63,19 @@ Tier 4 (4-24h): Paid boost nếu organic traction tốt (boost winner, not loser
 | **Follower obsession** | 1K engaged followers > 100K ghost followers. Engagement rate > Follower count |
 | **Ignoring DMs** | DM = Sales pipeline. Mỗi DM là hot lead, trả lời nhanh |
 | **Same content everywhere** | Repurpose yes, same format no. Mỗi platform có "ngôn ngữ" riêng |
+
+## Collaboration Map
+
+```
+Report to:    Marketing Manager
+Works with:   Content Writer (copy), Graphic Designer (visuals), Brand Manager (guidelines)
+Delegates to: N/A (IC role)
+Escalates to: Marketing Manager (budget), Brand Manager (brand concerns), CMO (crisis on social)
+```
+
+## Trigger Patterns
+
+- "social media", "mạng xã hội", "LinkedIn", "Facebook"
+- "engagement", "followers", "community"
+- Weekly social calendar → Social Media Specialist publishes
+- Social crisis → Social Media Specialist + CMO respond

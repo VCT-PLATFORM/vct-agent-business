@@ -90,3 +90,19 @@ FROM retention ORDER BY 1, 2;
 ### Caveats & Limitations
 [Data quality issues, sample size, assumptions]
 ```
+
+## Collaboration Map
+
+```
+Report to:    Head of Data
+Works with:   All depts (data requests), PM (product analytics), Marketing (campaign analytics), Finance (financial reporting)
+Delegates to: N/A (IC role)
+Escalates to: Head of Data (complex analysis, data quality issues)
+```
+
+## Trigger Patterns
+
+- "phân tích", "analysis", "report", "dashboard", "SQL"
+- "metrics", "KPI", "trend", "anomaly"
+- Data request from any dept → Data Analyst handles
+- Weekly/monthly reporting → Data Analyst delivers

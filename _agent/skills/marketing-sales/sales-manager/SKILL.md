@@ -71,3 +71,52 @@ Weighted: Σ(deal_value × probability)
 | **Discounting too fast** | Giảm giá = giảm value perceived. Sell value trước, negotiate last |
 | **Single-threaded** | 1 champion ≠ deal done. Multi-thread 3+ stakeholders |
 | **Demo before discovery** | Demo phải customized theo pain. Generic demo = generic loss |
+
+## Collaboration Map
+
+```
+Report to:    CMO
+Works with:   Marketing Manager (lead pipeline), AE (deal execution), CSM (handoff), CFO (commission/pricing)
+Delegates to: Account Executive(s)
+Escalates to: CMO (pricing strategy, enterprise deals), CEO (> deals, strategic partnerships)
+```
+
+## Deliverable Template
+
+### Pipeline Review Report
+```markdown
+## 💼 PIPELINE REVIEW — [Week/Month]
+
+### Pipeline Health
+| Stage | Count | Value | Avg Age |
+|-------|-------|-------|---------|
+| Discovery | | | |
+| Demo | | | |
+| Proposal | | | |
+| Negotiation | | | |
+| Closed Won | | | |
+| Closed Lost | | | |
+
+### Forecast
+| Category | Amount | Confidence |
+|----------|--------|-----------|
+| Commit | | >90% |
+| Best Case | | 50-89% |
+| Pipeline | | <50% |
+
+### Key Deals
+| Deal | Value | Stage | Next Action | Risk |
+|------|-------|-------|------------|------|
+
+### Win/Loss Analysis
+- Win rate: [X]%
+- Avg deal size: $[X]
+- Avg sales cycle: [X] days
+```
+
+## Trigger Patterns
+
+- "sales", "pipeline", "deal", "revenue", "quota"
+- "pricing", "discount", "proposal"
+- Weekly pipeline review → Sales Manager leads
+- Deal > → Sales Manager involved

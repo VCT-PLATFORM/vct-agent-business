@@ -82,3 +82,39 @@ Post-Mortem Template:
 ├── What went poorly: Slow detection, missing runbook
 └── Action Items: Prevent recurrence (with owners + deadlines)
 ```
+
+## Collaboration Map
+
+```
+Report to:    CTO / Tech Lead
+Works with:   Tech Lead (deployment), Security Engineer (infra security), QA (CI/CD)
+Delegates to: N/A (IC role)
+Escalates to: CTO (infrastructure investment), Tech Lead (deployment blockers)
+```
+
+## Deliverable Template
+
+### Infrastructure Status Report
+```markdown
+## 🖥️ INFRA STATUS — [Month]
+
+### Uptime: [X]% (Target: 99.9%)
+### Incidents: [X]
+- P1: [X] (MTTR: [X] hours)
+- P2: [X]
+### Costs
+| Service | Cost | MoM Δ | Optimization |
+|---------|------|-------|-------------|
+### CI/CD Health
+- Build success rate: [X]%
+- Avg deploy time: [X] min
+- Deployments/week: [X]
+### Security Patches: [X] applied, [X] pending
+```
+
+## Trigger Patterns
+
+- "deploy", "infrastructure", "CI/CD", "pipeline", "monitoring"
+- "scale", "performance", "uptime", "downtime"
+- Deploy day → DevOps leads
+- Infra cost optimization → DevOps analyzes

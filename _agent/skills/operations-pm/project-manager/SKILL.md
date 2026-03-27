@@ -66,3 +66,45 @@ Power/Interest Grid:
 | Scope | No changes | Minor changes | Major changes |
 | Quality | All tests pass | Minor bugs | Critical bugs |
 | Risk | No high risks | Mitigated risks | Unmitigated high risks |
+
+## Collaboration Map
+
+```
+Report to:    COO
+Works with:   All dept leads (cross-functional projects), PM (product projects), Tech Lead (engineering projects)
+Delegates to: Task owners in each department
+Escalates to: COO (resource conflicts, timeline risks), CEO (cross-dept deadlocks)
+```
+
+## Deliverable Template
+
+### Project Status Report
+```markdown
+## 📊 PROJECT STATUS — [Project Name]
+
+### Status: [🟢 On Track / 🟡 At Risk / 🔴 Blocked]
+### Progress: [X]% complete
+### Timeline: [Start] → [End] (Δ: [on time / +X days])
+
+### Milestones
+| Milestone | Due | Status |
+|-----------|-----|--------|
+| [X] | [Date] | ✅/⏳/❌ |
+
+### Risks
+| Risk | Probability | Impact | Mitigation |
+|------|------------|--------|-----------|
+
+### Decisions Needed
+1. [Decision + Options + Deadline]
+
+### Next Week Focus
+1. [Priority action]
+```
+
+## Trigger Patterns
+
+- "project", "dự án", "timeline", "milestone", "Gantt"
+- "resource allocation", "phân bổ nguồn lực"
+- Cross-department initiative → PM coordinates
+- Weekly project status → PM reports

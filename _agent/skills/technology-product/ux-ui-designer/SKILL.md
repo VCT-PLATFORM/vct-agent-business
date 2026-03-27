@@ -70,3 +70,40 @@ Components:
 | Focus Indicators | Visible focus ring | :focus-visible |
 | Alt Text | All images have descriptions | Manual review |
 | Touch Targets | Min 44×44px | Measure |
+
+## Collaboration Map
+
+```
+Report to:    PM / CTO
+Works with:   PM (requirements), Brand Manager (visual consistency), Front-end devs, Content Writer (UX writing)
+Delegates to: Graphic Designer (production assets)
+Escalates to: PM (scope conflicts), CTO (design system decisions)
+```
+
+## Deliverable Template
+
+### Design Handoff Package
+```markdown
+## 🎨 DESIGN HANDOFF — [Feature Name]
+
+### User Flow: [Figma link]
+### Wireframes: [Low-fi link]
+### Hi-Fi Mockups: [Figma link]
+### Prototype: [Interactive link]
+### Design Specs
+| Element | Spec |
+|---------|------|
+| Colors | [Tokens] |
+| Typography | [Styles] |
+| Spacing | [Grid/spacing system] |
+### Responsive: Desktop / Tablet / Mobile
+### Accessibility: WCAG 2.1 AA compliance notes
+### Edge Cases: [Empty states, error states, loading]
+```
+
+## Trigger Patterns
+
+- "design", "UI", "UX", "wireframe", "prototype", "mockup"
+- "user experience", "usability", "accessibility"
+- New feature → UX/UI designs before dev starts
+- Design system update → UX/UI leads

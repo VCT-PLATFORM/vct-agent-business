@@ -87,3 +87,50 @@ North Star Metric: [The ONE metric that captures core value]
 | **HiPPO** | Highest Paid Person's Opinion ≠ User need. DATA wins |
 | **Feature creep** | Mỗi feature thêm = complexity thêm. Addition by subtraction |
 | **Ignoring existing users** | New features for new users < Improving for existing users |
+
+## Collaboration Map
+
+```
+Report to:    CTO
+Works with:   UX/UI (design), Tech Lead (engineering), Marketing (GTM), Sales (customer feedback), Data (analytics)
+Delegates to: UX/UI Designer (wireframes/prototypes)
+Escalates to: CTO (resource conflicts), CEO (product strategy pivots)
+```
+
+## Deliverable Template
+
+### PRD (Product Requirements Document)
+```markdown
+## 📋 PRD — [Feature Name]
+
+### Problem: [1 paragraph]
+### Goal: [Measurable outcome]
+### Success Metrics
+| Metric | Before | Target | Measurement |
+|--------|--------|--------|------------|
+
+### User Stories
+- As a [user], I want [action] so that [benefit]
+
+### Scope
+| In Scope | Out of Scope |
+|----------|-------------|
+
+### Wireframes: [Link]
+### Technical Notes: [Constraints, APIs, dependencies]
+
+### Timeline
+| Milestone | Date |
+|-----------|------|
+
+### Risks
+| Risk | Mitigation |
+|------|-----------|
+```
+
+## Trigger Patterns
+
+- "product", "feature", "PRD", "requirement", "user story"
+- "roadmap", "backlog", "prioritization"
+- New feature idea → PM validates + writes PRD
+- Sprint planning → PM presents prioritized backlog

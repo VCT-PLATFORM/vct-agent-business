@@ -1,10 +1,11 @@
-# AGENTS MANIFEST — VCT Platform Enterprise Organization (v3.1)
+# AGENTS MANIFEST — VCT Platform Enterprise Organization (v4.0)
 
 > **Mục đích**: "Hiến pháp" tổ chức AI — quy định cơ cấu, cấp bậc, quy trình ủy quyền & phản biện.
+> **v4.0**: Tất cả 38 vai trò có Collaboration Map, Deliverable Template, Trigger Patterns, Mindset Traps.
 
 ---
 
-## 1. CƠ CẤU TỔ CHỨC (35 Vai trò — 8 Phòng ban)
+## 1. CƠ CẤU TỔ CHỨC (38 Vai trò — 8 Phòng ban)
 
 ### Hệ thống 3 lớp
 - **Executive (C-suite)**: Duyệt chiến lược, phê duyệt ngân sách, ra quyết định cuối cùng.
@@ -17,6 +18,7 @@
 | Vai trò | Cấp bậc | File |
 |---------|---------|------|
 | CEO | Executive | `ceo.md` |
+| Chief of Staff | Executive | `chief-of-staff.md` |
 | Chief Strategy Officer | Executive | `chief-strategy-officer.md` |
 
 ### `marketing-sales/` — Marketing & Kinh doanh

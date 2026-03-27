@@ -67,3 +67,43 @@ metadata:
 ### Notes
 [Frequency, workaround if any]
 ```
+
+## Collaboration Map
+
+```
+Report to:    Tech Lead / COO
+Works with:   Dev team (testing), PM (acceptance criteria), DevOps (CI/CD integration)
+Delegates to: N/A (IC role)
+Escalates to: Tech Lead (critical bugs), PM (scope/acceptance changes)
+```
+
+## Deliverable Template
+
+### QA Report
+```markdown
+## 🧪 QA REPORT — [Sprint/Release]
+
+### Summary: [PASS / FAIL / CONDITIONAL PASS]
+### Test Coverage: [X]%
+### Tests
+| Type | Total | Pass | Fail | Skip |
+|------|-------|------|------|------|
+| Unit | | | | |
+| Integration | | | | |
+| E2E | | | | |
+| Manual | | | | |
+
+### Open Bugs
+| ID | Title | Severity | Blocker? |
+|----|-------|---------|---------|
+
+### Regression: [Pass/Fail]
+### Recommendation: [Ship / Fix first / Rollback]
+```
+
+## Trigger Patterns
+
+- "test", "QA", "quality", "bug", "regression"
+- "release readiness", "go/no-go"
+- PR ready → QA tests
+- Release day → QA sign-off required
