@@ -91,7 +91,7 @@
 | -------------- | --------------------------------------- |
 | **Frontend**   | Next.js, React, TypeScript, TailwindCSS |
 | **Backend** | NestJS, TypeScript |
-| **Database** | PostgreSQL (Tự host / Railway) |
+| **Database**   | PostgreSQL (Supabase)                   |
 | **Messaging**  | NATS JetStream                          |
 | **Hosting**    | Vercel (Frontend), Railway/Supabase (Backend) |
 | **CI/CD**      | GitHub Actions                          |
