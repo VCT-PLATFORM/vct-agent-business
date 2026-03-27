@@ -11,7 +11,7 @@
 | ------------- | --------------------------------- |
 | **Tên**       | Công Ty TNHH VCT Platform         |
 | **Loại hình** | Công ty Công nghệ — SaaS Platform |
-| **Lĩnh vực**  | [Cập nhật: Phần mềm]              |
+| **Lĩnh vực**  | SaaS — Quản trị Võ thuật           |
 | **Thành lập** | [Cập nhật: 09/03/2026]            |
 | **Quy mô**    | [Cập nhật: 01 người]              |
 | **Trụ sở**    | Việt Nam                          |
@@ -22,28 +22,27 @@
 
 ### Tầm nhìn (Vision)
 
-> [Cập nhật: Tầm nhìn dài hạn 5-10 năm của VCT Platform]
+> Trở thành nền tảng quản lý võ thuật hàng đầu thế giới.
 
 ### Sứ mệnh (Mission)
 
-> [Cập nhật: Sứ mệnh — VCT Platform tồn tại để giải quyết vấn đề gì cho ai?]
+> Số hóa quản lý võ thuật toàn diện — giúp liên đoàn, câu lạc bộ, huấn luyện viên và vận động viên quản lý hiệu quả, minh bạch, và chuyên nghiệp hơn.
 
 ### Giá trị Cốt lõi (Core Values)
 
-1. [Cập nhật: VD: Innovation — Luôn tìm cách tốt hơn]
-2. [Cập nhật: VD: Customer-First — Khách hàng là trung tâm]
-3. [Cập nhật: VD: Transparency — Minh bạch trong mọi việc]
-4. [Cập nhật: VD: Excellence — Không chấp nhận tầm thường]
-5. [Cập nhật: VD: Ownership — Mỗi người là chủ của kết quả]
+1. **Võ Đạo (Integrity)** — Minh bạch, trung thực trong mọi việc — từ sản phẩm đến kinh doanh
+2. **Tinh Tấn (Excellence)** — Không ngừng cải tiến, không chấp nhận tầm thường
+3. **Đồng Hành (Customer First)** — Thành công của khách hàng là thành công của mình
+4. **Đột Phá (Innovation)** — Dám thay đổi, dám số hóa cái cũ — dẫn đầu thay vì theo sau
+5. **Kỷ Luật (Ownership)** — Mỗi người chịu trách nhiệm trọn vẹn với kết quả của mình
 
 ## 3. Sản phẩm & Dịch vụ
 
 ### Sản phẩm Chính
 
-| Sản phẩm   | Mô tả        | Khách hàng Mục tiêu | Giá             |
-| ---------- | ------------ | ------------------- | --------------- |
-| [Tên SP 1] | [Mô tả ngắn] | [Segment]           | [Pricing model] |
-| [Tên SP 2] | [Mô tả ngắn] | [Segment]           | [Pricing model] |
+| Sản phẩm | Mô tả | Khách hàng Mục tiêu | Giá |
+| -------- | ----- | ------------------- | --- |
+| VCT Platform | Nền tảng quản trị võ thuật toàn diện | Liên đoàn, CLB, HLV, VĐV, Phụ huynh | Tùy theo nhu cầu & quy mô |
 
 ### Unique Value Proposition (UVP)
 
@@ -57,14 +56,14 @@
 
 ### Ideal Customer Profile (ICP)
 
-| Attribute          | Detail                                   |
-| ------------------ | ---------------------------------------- |
-| **Ngành**          | [Cập nhật]                               |
-| **Quy mô**         | [Cập nhật: Số NV, doanh thu]             |
-| **Vị trí địa lý**  | [Cập nhật]                               |
-| **Pain Points**    | [Cập nhật: 3-5 vấn đề chính họ gặp]      |
-| **Decision Maker** | [Cập nhật: Chức vụ người quyết định mua] |
-| **Budget**         | [Cập nhật: Ngân sách điển hình]          |
+| Attribute | Detail |
+| --------- | ------ |
+| **Ngành** | Võ thuật, Thể thao |
+| **Đối tượng** | Liên đoàn võ thuật, Ban tổ chức giải, Câu lạc bộ/Võ đường, Võ sư/HLV, VĐV, Phụ huynh VĐV |
+| **Vị trí địa lý** | Việt Nam (ưu tiên) → Đông Nam Á → Toàn cầu |
+| **Pain Points** | Quản lý học viên/VĐV thủ công, Tổ chức giải đấu phức tạp, Thiếu minh bạch trong cấp đai/thăng cấp, Quản lý tài chính CLB/liên đoàn kém hiệu quả, Phụ huynh thiếu thông tin về con em |
+| **Decision Maker** | Chủ tịch Liên đoàn, Chủ nhiệm CLB, Trưởng ban tổ chức giải |
+| **Budget** | Tùy quy mô — từ CLB nhỏ đến Liên đoàn quốc gia |
 
 ### User Personas
 
