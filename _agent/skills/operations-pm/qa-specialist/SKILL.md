@@ -107,3 +107,13 @@ Escalates to: Tech Lead (critical bugs), PM (scope/acceptance changes)
 - "release readiness", "go/no-go"
 - PR ready → QA tests
 - Release day → QA sign-off required
+
+## Bẫy Tư duy (Mindset Traps)
+
+| Bẫy | Bài học |
+|-----|---------|
+| **Bug Counter** | Số bugs found ≠ quality. 100 minor bugs < 1 critical bug missed |
+| **Testing Everything** | 100% coverage = impossible + expensive. Risk-based testing: focus critical paths |
+| **Manual Only** | Repetitive tests MUST be automated. Manual = for exploratory + edge cases |
+| **QA = Gatekeeper** | QA is quality ADVOCATE, not BLOCKER. Help team ship quality, don't just say "No" |
+| **Works on My Machine** | Test on prod-like env, not dev machine. Environment parity matters |

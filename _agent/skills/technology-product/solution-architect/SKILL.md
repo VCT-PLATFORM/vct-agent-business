@@ -106,3 +106,13 @@ Escalates to: CTO (architectural decisions with >6 months impact)
 - "build vs buy", "migration", "refactor"
 - New service/feature with architectural impact → SA involved
 - ADR needed → SA drafts
+
+## Bẫy Tư duy (Mindset Traps)
+
+| Bẫy | Bài học |
+|-----|---------|
+| **Resume-Driven Architecture** | Choose tech because it's RIGHT, not because you want to learn it |
+| **Over-Abstraction** | 7 layers of abstraction for a CRUD app = over-engineering |
+| **Diagram = Done** | Architecture diagram ≠ working system. Prototype critical paths FIRST |
+| **Vendor Lock-In Paranoia** | Some lock-in is OK if ROI is clear. Don't build everything yourself to avoid it |
+| **Ignoring Ops** | Design for operability: monitoring, logging, rollback, debugging in production |

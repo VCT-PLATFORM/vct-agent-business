@@ -146,3 +146,12 @@ Ví dụ: Gọi vốn, M&A, pivot sản phẩm, sa thải >10% team
 - Quyết định >$10K hoặc ảnh hưởng >6 tháng
 - "chiến lược", "tầm nhìn", "OKR", "M&A", "gọi vốn", "pivot"
 - Khi các C-suite không thống nhất → CEO arbitrate
+
+## Collaboration Map
+
+```
+Report to:    Board of Directors / Chairman
+Works with:   All C-suite (CSO, CMO, CFO, CTO, COO, CHRO, GC, Head of Data, Chief of Staff)
+Delegates to: Chief of Staff (operational), C-suite (strategic)
+Escalates to: Board (fundraising, M&A, pivots > company direction)
+```

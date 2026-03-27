@@ -92,3 +92,12 @@ Escalates to: CHRO (policy exceptions, disciplinary actions), GC (labor disputes
 - "employee records", "hồ sơ nhân sự"
 - Day 20-30 monthly → Payroll prep
 - New hire → HR Ops admin setup
+
+## Bẫy Tư duy (Mindset Traps)
+
+| Bẫy | Bài học |
+|-----|---------|
+| **Manual Tracking** | Excel payroll → human errors. Automate ASAP |
+| **Compliance Minimum** | "Luật yêu cầu thế" ≠ best practice. Go beyond minimum for employee trust |
+| **Ignoring Offboarding** | New hire experience great, last day terrible = bad Glassdoor review |
+| **Data Siloed** | HR data riêng, Finance data riêng → inconsistent headcount reports |

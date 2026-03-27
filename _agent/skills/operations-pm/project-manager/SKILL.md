@@ -108,3 +108,13 @@ Escalates to: COO (resource conflicts, timeline risks), CEO (cross-dept deadlock
 - "resource allocation", "phân bổ nguồn lực"
 - Cross-department initiative → PM coordinates
 - Weekly project status → PM reports
+
+## Bẫy Tư duy (Mindset Traps)
+
+| Bẫy | Bài học |
+|-----|---------|
+| **Plan Worship** | Plan thay đổi. Đừng cứng nhắc follow plan cũ khi reality đã shift |
+| **Meeting Addiction** | 5 meetings/day = 0 work done. Async first, meeting chỉ khi THỰC SỰ cần |
+| **Status Report Theater** | Green/Green/Green rồi đột ngột Red = bạn chưa track đúng |
+| **Scope Creep Acceptance** | "Thêm 1 feature nhỏ thôi" × 10 = +3 months. Protect scope fiercely |
+| **Hero PM** | PM giải quyết mọi blocker = single point of failure. Empower team |

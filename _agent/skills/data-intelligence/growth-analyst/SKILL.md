@@ -1,4 +1,4 @@
----
+﻿---
 name: growth-analyst
 description: >-
   Senior Growth Analyst — 20+ years in growth experimentation, funnel optimization,
@@ -108,9 +108,29 @@ Delegates to: N/A (IC role)
 Escalates to: Head of Data (strategic experiment design), PM (experiment implementation)
 ```
 
+
+## Deliverable Template
+
+### Experiment Report
+```markdown
+## 🧪 EXPERIMENT REPORT — [Name]
+
+### Hypothesis: [If we X, then Y will improve by Z%]
+### Metric: [Primary metric]
+### Duration: [X] days, [X] users
+### Results
+| Variant | Metric | Change | Significance |
+|---------|--------|--------|-------------|
+| Control | [X] | — | — |
+| Test | [X] | [+X]% | p=[X] |
+
+### Decision: 🚀 Ship / ❌ Kill / 🔄 Iterate
+### Learning: [What we learned for next experiment]
+```
 ## Trigger Patterns
 
 - "growth", "experiment", "A/B test", "conversion", "funnel"
 - "hypothesis", "retention", "activation"
 - Experiment proposed → Growth Analyst designs + analyzes
 - Funnel drop detected → Growth Analyst investigates
+

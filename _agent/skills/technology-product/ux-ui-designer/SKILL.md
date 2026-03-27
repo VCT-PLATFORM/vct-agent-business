@@ -107,3 +107,13 @@ Escalates to: PM (scope conflicts), CTO (design system decisions)
 - "user experience", "usability", "accessibility"
 - New feature → UX/UI designs before dev starts
 - Design system update → UX/UI leads
+
+## Bẫy Tư duy (Mindset Traps)
+
+| Bẫy | Bài học |
+|-----|---------|
+| **Pixel Perfect Obsession** | 95% users don't notice 2px misalignment. Focus on USABILITY, not perfection |
+| **Design for Designers** | You're designing for USERS, not Dribbble likes. Test with real users |
+| **Ignoring Dev Constraints** | Beautiful design that takes 3 months to implement = bad design. Design WITH eng |
+| **Skipping Research** | "I know what users want" = most dangerous sentence. DO user research |
+| **Consistency Rigidity** | Design system = guide, not prison. Break rules when UX demands it |

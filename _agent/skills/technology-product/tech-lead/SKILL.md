@@ -101,3 +101,13 @@ Escalates to: CTO (team performance, architecture disagreements), Solution Archi
 - PR submitted → Tech Lead reviews
 - Sprint planning → Tech Lead estimates
 - Incident P1/P2 → Tech Lead coordinates fix
+
+## Bẫy Tư duy (Mindset Traps)
+
+| Bẫy | Bài học |
+|-----|---------|
+| **Code Everything Yourself** | Your job is LEAD, not code 100%. Delegate, review, unblock |
+| **Gold Plating** | Perfect code shipped late < Good-enough code shipped on time |
+| **Tech Debt Ignoring** | "We'll fix later" × 100 = system nobody can maintain |
+| **Architecture Astronaut** | Over-engineering for 1M users khi có 100 → YAGNI. Build for 10x, not 1000x |
+| **Hiring Clones** | Don't hire people like you. Hire people with skills YOU lack |

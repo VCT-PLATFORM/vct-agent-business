@@ -105,3 +105,13 @@ Escalates to: CTO (security incidents, major vulnerabilities), GC (data breach l
 - "data breach", "access control", "encryption"
 - Security incident → Security Engineer leads response
 - Code review security flag → Security Engineer reviews
+
+## Bẫy Tư duy (Mindset Traps)
+
+| Bẫy | Bài học |
+|-----|---------|
+| **Security > Usability** | Fort Knox security + terrible UX = users find workarounds = LESS secure |
+| **FUD Marketing** | Scaring people ≠ security awareness. Educate, don't terrorize |
+| **Pen Test = Secure** | Pen test is a snapshot. Continuous monitoring > annual pen test |
+| **Ignoring Social Engineering** | 90% of breaches start with phishing. Tech controls alone not enough |
+| **Zero Trust Extremism** | Zero trust is a journey, not a switch. Implement incrementally |

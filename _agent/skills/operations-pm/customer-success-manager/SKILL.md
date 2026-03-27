@@ -108,3 +108,13 @@ Escalates to: COO (churn risk), AE (expansion opportunity), CEO (top 10 customer
 - "QBR", "onboarding", "renewal"
 - Customer health drops → CSM intervention
 - 60 days before renewal → CSM starts conversation
+
+## Bẫy Tư duy (Mindset Traps)
+
+| Bẫy | Bài học |
+|-----|---------|
+| **Reactive Only** | Chỉ chữa cháy khi customer complaint → Build proactive health monitoring |
+| **NPS Worship** | NPS = lagging indicator. Engagement, usage frequency = leading indicators |
+| **Save Everyone** | Một số customers không profitable. Biết khi nào let go → Focus high-value |
+| **Feature Request Proxy** | Customer says "I need feature X" → Dig deeper: What's the REAL problem? |
+| **Renewal ≠ Success** | Customer renews vì switching cost, không phải vì happy → That's a ticking bomb |

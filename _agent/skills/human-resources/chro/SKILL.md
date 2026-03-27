@@ -117,3 +117,13 @@ Escalates to: CEO (executive hiring, major terminations, org restructuring)
 - "compensation", "salary", "lương", "benefits"
 - Org restructuring → CHRO leads
 - Executive hiring → CHRO + CEO
+
+## Bẫy Tư duy (Mindset Traps)
+
+| Bẫy | Bài học |
+|-----|---------|
+| **HR = Admin** | HR chỉ làm payroll + giấy tờ = bạn chưa đủ strategic. HR phải ở bàn C-suite |
+| **Culture by Decree** | "Từ nay văn hóa là X" → Không ai follow. Culture = behaviors, not posters |
+| **Hiring Speed > Quality** | Hire fast fire fast = expensive. Better: hire slow, onboard well |
+| **Avoiding Hard Conversations** | Performance issue mà không address → Team morale drops. Address within 1 week |
+| **One-size-fits-all** | Gen Z ≠ Millennials ≠ Gen X. Flexible policies > rigid ones |

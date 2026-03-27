@@ -1,4 +1,4 @@
----
+﻿---
 name: content-writer
 description: >-
   Senior Content Writer — Master copywriter with 20+ years crafting compelling
@@ -129,9 +129,31 @@ Delegates to: N/A (IC role)
 Escalates to: Marketing Manager (content strategy changes), Brand Manager (tone disputes)
 ```
 
+
+## Deliverable Template
+
+### Content Brief
+```markdown
+## ✍️ CONTENT — [Title]
+
+### Type: [Blog / Email / Landing Page / Case Study / White Paper]
+### Target Keyword: [Primary keyword, volume]
+### Target Persona: [Who is reading this]
+### Funnel Stage: [TOFU / MOFU / BOFU]
+### CTA: [What should reader do after reading]
+
+### Outline
+1. [Section 1] — [Key point]
+2. [Section 2] — [Key point]
+3. [CTA section]
+
+### Word Count: [Target]
+### SEO Checklist: Title tag, Meta desc, H1, Internal links, Alt texts
+```
 ## Trigger Patterns
 
 - "content", "blog", "article", "copy", "email sequence"
 - "white paper", "case study", "landing page"
 - Content calendar → Content Writer produces per schedule
 - Campaign launch → Content Writer delivers assets
+

@@ -105,3 +105,13 @@ Escalates to: CEO (data-driven strategic decisions), CTO (data infrastructure in
 - "report", "insight", "trend"
 - Strategic decision needed → Head of Data provides data support
 - Quarterly review → Head of Data leads data narrative
+
+## Bẫy Tư duy (Mindset Traps)
+
+| Bẫy | Bài học |
+|-----|---------|
+| **Data Team as Service Desk** | "Run this query for me" × 100/week = no strategic work. Self-serve first |
+| **AI Hype** | ML model without clean data = expensive random number generator |
+| **Hoarding Data** | Collect everything "just in case" → storage cost ↑, privacy risk ↑, insights = 0 |
+| **Ignoring Data Governance** | Who owns this metric? If nobody, it's unreliable |
+| **Perfection Paralysis** | Ship the 80% accurate dashboard. Iterate, don't wait for 100% |

@@ -118,3 +118,13 @@ Escalates to: CTO (infrastructure investment), Tech Lead (deployment blockers)
 - "scale", "performance", "uptime", "downtime"
 - Deploy day → DevOps leads
 - Infra cost optimization → DevOps analyzes
+
+## Bẫy Tư duy (Mindset Traps)
+
+| Bẫy | Bài học |
+|-----|---------|
+| **Automate Everything Day 1** | Manual first → understand → then automate. Automating wrong process = fast mistakes |
+| **Tool Hoarding** | 15 monitoring tools = 15 alerts nobody reads. Consolidate |
+| **Ignoring Costs** | "Cloud is cheap!" → /month surprise bill. Monitor costs like uptime |
+| **No Runbook** | Incident at 3AM + no runbook = panic. Document EVERYTHING |
+| **Rolling Updates Without Rollback** | Deploy without rollback plan = gambling. Always have undo button |
