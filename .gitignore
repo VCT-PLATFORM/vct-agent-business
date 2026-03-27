@@ -31,3 +31,7 @@ Thumbs.db
 
 # Misc
 *.tsbuildinfo
+
+_agent/shared_knowledge/invoices/
+
+_agent/shared_knowledge/emails/
