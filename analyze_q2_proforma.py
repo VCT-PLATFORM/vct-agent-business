@@ -22,19 +22,19 @@ def analyze_finance():
         
         # Clean data
         df['Ngay_PhatSinh'] = pd.to_datetime(df['Ngay_PhatSinh'])
-        df['So_Tien'] = pd.to_numeric(df['So_Tien'], errors='coerce').fillna(0)
+        df['Tong_Tien'] = pd.to_numeric(df['Tong_Tien'], errors='coerce').fillna(0)
         
         # Filter 2026 data
         df_2026 = df[df['Ngay_PhatSinh'].dt.year == 2026].copy()
         
         # Categorize
         # Revenue: TK start with 5 (usually 511)
-        revenue = df_2026[df_2026['Ma_TK_Co'].astype(str).str.startswith('5')]['So_Tien'].sum()
+        revenue = df_2026[df_2026['TK_Co'].astype(str).str.startswith('5')]['Tong_Tien'].sum()
         
         # Expenses: TK start with 6 or 154
-        admin_exp = df_2026[df_2026['Ma_TK_No'].astype(str).str.startswith('642')]['So_Tien'].sum()
-        sales_exp = df_2026[df_2026['Ma_TK_No'].astype(str).str.startswith('641')]['So_Tien'].sum()
-        prod_exp = df_2026[df_2026['Ma_TK_No'].astype(str).str.startswith('154')]['So_Tien'].sum()
+        admin_exp = df_2026[df_2026['TK_No'].astype(str).str.startswith('642')]['Tong_Tien'].sum()
+        sales_exp = df_2026[df_2026['TK_No'].astype(str).str.startswith('641')]['Tong_Tien'].sum()
+        prod_exp = df_2026[df_2026['TK_No'].astype(str).str.startswith('154')]['Tong_Tien'].sum()
         
         total_exp = admin_exp + sales_exp + prod_exp
         net_income = revenue - total_exp

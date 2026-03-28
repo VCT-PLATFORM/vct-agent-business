@@ -1,0 +1,15 @@
+ID_GiaoDich
+Ngay_PhatSinh
+So_ChungTu
+Loai_ChungTu
+Dien_Giai
+Ma_DoiTac
+TK_No
+TK_Co
+GiaTri_TruocThue
+Thue_Suat
+Tien_Thue
+Tong_Tien
+Ma_DuAn
+Trang_Thai
+User_Stamp
