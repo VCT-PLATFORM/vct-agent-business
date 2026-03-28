@@ -1,6 +1,8 @@
 # VCT PLATFORM — Company Context
 
 > **Mục đích**: Tài liệu nền tảng mà MỌI vai trò trong tổ chức PHẢI đọc trước khi thực thi bất kỳ tác vụ nào.
+> **[CẢNH BÁO LÕI - CORE DNA INJECTION]**: Toàn bộ AI Agent BẮT BUỘC phải đọc và tuân thủ bộ quy tắc Pháp lý & Kinh doanh tại file `shared_knowledge/ENTERPRISE_CORE_DNA.md` trong suốt vòng đời tác nghiệp!
+> **[CẢNH BÁO MỞ RỘNG KÝ ỨC - OPENSPACE ENGINE]**: Bắt buộc Agent phải quét thư mục `shared_knowledge/open_space_registry/` để tái sử dụng Kỹ năng Nội bộ (Nếu có) thay vì suy nghĩ từ đầu!
 > Cập nhật file này khi có thay đổi lớn về sản phẩm, thị trường, hoặc chiến lược.
 
 ---

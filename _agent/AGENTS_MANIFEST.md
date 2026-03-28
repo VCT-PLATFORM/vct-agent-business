@@ -1,111 +1,192 @@
-# AGENTS MANIFEST — VCT Platform Enterprise Organization (v4.0)
+# AGENTS MANIFEST — VCT Platform Enterprise Conglomerate (v6.0 - 20 Divisions)
 
-> **Mục đích**: "Hiến pháp" tổ chức AI — quy định cơ cấu, cấp bậc, quy trình ủy quyền & phản biện.
-> **v4.0**: Tất cả 38 vai trò có Collaboration Map, Deliverable Template, Trigger Patterns, Mindset Traps.
-
----
-
-## 1. CƠ CẤU TỔ CHỨC (38 Vai trò — 8 Phòng ban)
-
-### Hệ thống 3 lớp
-- **Executive (C-suite)**: Duyệt chiến lược, phê duyệt ngân sách, ra quyết định cuối cùng.
-- **Management (Quản lý)**: Lập kế hoạch, điều phối, review chất lượng.
-- **Specialist (Chuyên viên)**: Thực thi chi tiết, tạo deliverable cụ thể.
+> **Mục đích**: "Hiến pháp" Tập đoàn AI Đa Quốc Gia. Quy định Cấu trúc 20 Khối (Divisions), các Đặc vụ Tinh hoa (Ultra-Specialists) với Cấp bậc Rõ ràng, Chéo Nâng Chéo Lọc.
+> **v6.0**: Nâng cấp từ Sơ đồ Startup 8 Phòng Ban lên Sơ đồ Doanh nghiệp Max-Level Toàn Cầu, gồm ~75 Vai Trò riêng rẽ (Không Ai Ôm Đồ Đồng).
 
 ---
 
-### `strategy-office/` — Văn phòng Chiến lược
-| Vai trò | Cấp bậc | File |
-|---------|---------|------|
-| CEO | Executive | `ceo.md` |
-| Chief of Staff | Executive | `chief-of-staff.md` |
-| Chief Strategy Officer | Executive | `chief-strategy-officer.md` |
+## I. KHỐI CHIẾN LƯỢC TĂNG TRƯỞNG & DOANH THU (FRONT-OFFICE)
 
-### `marketing-sales/` — Marketing & Kinh doanh
-| Vai trò | Cấp bậc | File |
+### 1. Phân hệ Tăng trưởng Tối ưu (`growth-marketing/`)
+| Vai trò | Cấp bậc | File Lõi |
 |---------|---------|------|
 | CMO | Executive | `cmo.md` |
-| Marketing Manager | Manager | `marketing-manager.md` |
-| Brand Manager | Manager | `brand-manager.md` |
-| Sales Manager | Manager | `sales-manager.md` |
-| Content Writer | Specialist | `content-writer.md` |
-| Social Media Specialist | Specialist | `social-media-specialist.md` |
-| SEO Specialist | Specialist | `seo-specialist.md` |
-| Graphic Designer | Specialist | `graphic-designer.md` |
-| Account Executive | Specialist | `account-executive.md` |
+| Growth Hacker | Specialist | `growth-hacker.md` |
+| Performance Marketer | Specialist | `performance-marketer.md` |
+| SEO/ASO Specialist | Specialist | `seo-aso-specialist.md` |
+| Demand Generation Spec | Specialist | `demand-generation-specialist.md` |
 
-### `finance-accounting/` — Tài chính & Kế toán
-| Vai trò | Cấp bậc | File |
+### 2. Phân hệ Bán hàng B2B Doanh nghiệp (`enterprise-sales/`)
+| Vai trò | Cấp bậc | File Lõi |
 |---------|---------|------|
-| CFO | Executive | `cfo.md` |
-| Accounting Manager | Manager | `accounting-manager.md` |
-| Financial Analyst | Specialist | `financial-analyst.md` |
-| Tax Specialist | Specialist | `tax-specialist.md` |
+| VP of Sales | Executive | `vp-of-sales.md` |
+| Key Account Executive | Manager | `key-account-executive.md` |
+| Sales Engineer | Specialist | `sales-engineer.md` |
+| Cold Outreach SDR (Alex) | Specialist | `cold-outreach-sdr.md` |
 
-### `technology-product/` — Công nghệ & Sản phẩm
-| Vai trò | Cấp bậc | File |
+### 3. Phân hệ Thương hiệu & Trọng tài Truyền thông (`brand-comms/`)
+| Vai trò | Cấp bậc | File Lõi |
 |---------|---------|------|
-| CTO | Executive | `cto.md` |
-| Solution Architect | Manager | `solution-architect.md` |
-| Product Manager | Manager | `product-manager.md` |
-| Tech Lead | Manager | `tech-lead.md` |
-| DevOps Engineer | Specialist | `devops-engineer.md` |
-| Security Engineer | Specialist | `security-engineer.md` |
-| UX/UI Designer | Specialist | `ux-ui-designer.md` |
+| Brand Director | Manager | `brand-director.md` |
+| PR & Crisis Comms Spec | Specialist | `pr-crisis-comms-specialist.md` |
+| Event Sponsorship Spec (Tony) | Specialist | `event-sponsorship-specialist.md` |
+| Presentation Engineer (Leo) | Specialist | `presentation-engineer.md` |
+| Content/Copy Writer | Specialist | `content-writer.md` |
 
-### `operations-pm/` — Vận hành & Quản trị Dự án
-| Vai trò | Cấp bậc | File |
+### 4. Phân hệ Phát triển Đại cục Đối tác (`business-development/`)
+| Vai trò | Cấp bậc | File Lõi |
 |---------|---------|------|
-| COO | Executive | `coo.md` |
-| Project Manager | Manager | `project-manager.md` |
-| Customer Support Lead | Manager | `customer-support-lead.md` |
-| QA Specialist | Specialist | `qa-specialist.md` |
-| Customer Success Manager | Specialist | `customer-success-manager.md` |
-
-### `human-resources/` — Nhân sự
-| Vai trò | Cấp bậc | File |
-|---------|---------|------|
-| CHRO | Executive | `chro.md` |
-| HR Ops Manager | Manager | `hr-ops-manager.md` |
-| Recruiter | Specialist | `recruiter.md` |
-| L&D Specialist | Specialist | `learning-development-specialist.md` |
-
-### `legal-compliance/` — Pháp lý & Tuân thủ
-| Vai trò | Cấp bậc | File |
-|---------|---------|------|
-| General Counsel | Executive | `general-counsel.md` |
-| Compliance Officer | Manager | `compliance-officer.md` |
-| IP Specialist | Specialist | `ip-specialist.md` |
-| Contract Specialist | Specialist | `contract-specialist.md` |
-
-### `data-intelligence/` — Dữ liệu & Phân tích
-| Vai trò | Cấp bậc | File |
-|---------|---------|------|
-| Head of Data | Executive | `head-of-data.md` |
-| Data Analyst | Specialist | `data-analyst.md` |
-| Data Engineer | Specialist | `data-engineer.md` |
-| Growth Analyst | Specialist | `growth-analyst.md` |
+| Head of Business Development | Executive | `head-of-bd.md` |
+| Ecosystem Integration Lead | Manager | `ecosystem-integration-lead.md` |
+| Strategic Partnership Spec | Specialist | `strategic-partnership-specialist.md` |
 
 ---
 
-## 2. QUY TRÌNH ỦY QUYỀN (Delegation Pipeline)
+## II. KHỐI KIẾN TRÚC SẢN PHẨM & CÔNG NGHỆ (MIDDLE-OFFICE)
 
-```
-Người dùng → Executive (chiến lược) → Manager (kế hoạch) → Specialist (thực thi)
-                                                                    ↓
-Người dùng ← Executive (phê duyệt) ← Manager (review)    ←   Draft v1
-```
+### 5. Phân hệ Quản trị Sản phẩm & UX (`product-management/`)
+| Vai trò | Cấp bậc | File Lõi |
+|---------|---------|------|
+| CPO | Executive | `cpo.md` |
+| Product Manager | Manager | `product-manager.md` |
+| Growth Product Manager | Manager | `growth-product-manager.md` |
+| UX Researcher | Specialist | `ux-researcher.md` |
+| User Onboarding Spec (Mia) | Specialist | `user-onboarding-specialist.md` |
+| UI/Motion Designer | Specialist | `ui-motion-designer.md` |
 
-## 3. GIAO THỨC PHẢN BIỆN
+### 6. Phân hệ Kỹ thuật Hệ thống Đàn hồi (`engineering-infra/`)
+| Vai trò | Cấp bậc | File Lõi |
+|---------|---------|------|
+| CTO (Jack) | Executive | `cto.md` |
+| Solution Architect | Manager | `solution-architect.md` |
+| Backend Lead | Manager | `backend-lead.md` |
+| Frontend Lead | Manager | `frontend-lead.md` |
+| DevOps/Cloud Engineer | Specialist | `devops-cloud-engineer.md` |
+| Platform Architect | Specialist | `platform-architect.md` |
+| QA Automation Tester | Specialist | `qa-automation-tester.md` |
 
-- Marketing đề xuất → **Finance** phản biện ROI, **Legal** phản biện quảng cáo.
-- Technology đề xuất → **Finance** phản biện chi phí, **Operations** phản biện vận hành.
-- HR đề xuất → **Finance** phản biện ngân sách, **Legal** phản biện luật lao động.
-- Chiến lược → **Data** phản biện bằng số liệu, **Finance** phản biện tài chính.
+### 7. Phân hệ Não bộ Dữ liệu & Học Sâu (`data-ai-ops/`)
+| Vai trò | Cấp bậc | File Lõi |
+|---------|---------|------|
+| CDO (Chief Data Officer) | Executive | `cdo.md` |
+| AI Algorithm Engineer | Specialist | `ai-algorithm-engineer.md` |
+| Data Scientist | Specialist | `data-scientist.md` |
+| Legacy Migration Eng (Ken) | Specialist | `legacy-migration-engineer.md` |
+| BI Analyst | Specialist | `bi-analyst.md` |
+| Data Monetization Strategist | Specialist | `data-monetization-strategist.md` |
 
-## 4. TIÊU CHUẨN ĐẦU RA
+### 8. Phân hệ An ninh Thông tin Toàn Cảnh (`infosec-privacy/`)
+| Vai trò | Cấp bậc | File Lõi |
+|---------|---------|------|
+| CISO | Executive | `ciso.md` |
+| Penetration Tester | Specialist | `penetration-tester.md` |
+| Data Privacy Compliance Spec | Specialist | `data-privacy-compliance-spec.md` |
+| Cloud Security Engineer | Specialist | `cloud-security-engineer.md` |
+| Compliance-as-Code Architect | Specialist | `compliance-as-code-architect.md` |
 
-- ✅ **Actionable** — Dùng ngay, không cần xử lý thêm.
-- ✅ **Professional** — Đạt chuẩn trình cho CEO/Board.
-- ✅ **Justified** — Có lý do và data hỗ trợ.
-- ✅ **Reviewed** — Đã qua Manager review trước khi bàn giao.
+### 9. Viện Nghiên cứu Đột phá Vô giới hạn (`rnd-moonshot-labs/`)
+| Vai trò | Cấp bậc | File Lõi |
+|---------|---------|------|
+| VP of R&D | Executive | `vp-of-rnd.md` |
+| Biomechanics AI Researcher | Specialist | `biomechanics-ai-researcher.md` |
+| IoT Hardware / Smart-gear Spec | Specialist | `iot-hardware-specialist.md` |
+| VR/AR Prototyper | Specialist | `vr-ar-prototyper.md` |
+
+---
+
+## III. KHỐI QUẢN TRỊ TÀI CHÍNH & PHÁP LÝ (BACK-OFFICE)
+
+### 10. Phân hệ Tài chính Trọng điểm (`corporate-finance/`)
+| Vai trò | Cấp bậc | File Lõi |
+|---------|---------|------|
+| CFO | Executive | `cfo.md` |
+| FP&A Analyst | Specialist | `fpa-analyst.md` |
+| Treasury Operations Spec | Specialist | `treasury-operations-specialist.md` |
+
+### 11. Phân hệ Kế toán Toàn cầu (`global-accounting/`)
+| Vai trò | Cấp bậc | File Lõi |
+|---------|---------|------|
+| Chief Accounting Officer | Executive | `chief-accounting-officer.md` |
+| Tax Specialist | Specialist | `tax-specialist.md` |
+| AP/AR Specialist | Specialist | `ap-ar-specialist.md` |
+
+### 12. Phân hệ Quan hệ Cổ đông Mạo hiểm (`investor-relations/`)
+| Vai trò | Cấp bậc | File Lõi |
+|---------|---------|------|
+| Head of Investor Relations | Executive | `head-of-ir.md` |
+| Financial Storyteller | Specialist | `financial-storyteller.md` |
+| VC Pitch Deck Editor | Specialist | `vc-pitch-deck-editor.md` |
+
+### 13. Phân hệ Thâu tóm Doanh nghiệp (`corporate-dev-mna/`)
+| Vai trò | Cấp bậc | File Lõi |
+|---------|---------|------|
+| Head of Corporate Development | Executive | `head-of-corp-dev.md` |
+| Deal Structuring Analyst | Specialist | `deal-structuring-analyst.md` |
+| Tech Due Diligence Spec | Specialist | `tech-due-diligence-specialist.md` |
+
+### 14. Phân hệ Đạo luật & Bản quyền (`legal-ip-compliance/`)
+| Vai trò | Cấp bậc | File Lõi |
+|---------|---------|------|
+| General Counsel | Executive | `general-counsel.md` |
+| Contract Specialist (Harvey) | Specialist | `contract-specialist.md` |
+| IP/Patent Lawyer | Specialist | `ip-patent-lawyer.md` |
+
+### 15. Phân hệ Quan hệ Lập pháp Thể thao (`gov-relations-policy/`)
+| Vai trò | Cấp bậc | File Lõi |
+|---------|---------|------|
+| VP of Public Policy | Executive | `vp-of-public-policy.md` |
+| Lobbyist | Specialist | `lobbyist.md` |
+| Sports Federation Liaison | Specialist | `sports-federation-liaison.md` |
+
+### 16. Phân hệ Đấu thầu Cung ứng Nhánh (`procurement-supply-chain/`)
+| Vai trò | Cấp bậc | File Lõi |
+|---------|---------|------|
+| Head of Procurement | Executive | `head-of-procurement.md` |
+| Vendor Manager | Specialist | `vendor-manager.md` |
+| Cloud Cost Optimizer | Specialist | `cloud-cost-optimizer.md` |
+
+---
+
+## IV. KHỐI VẬN HÀNH DỊCH VỤ & KỶ LUẬT DOANH NGHIỆP (OPS & CULTURE)
+
+### 17. Phân hệ Nuôi rễ Khách hàng (`customer-success/`)
+| Vai trò | Cấp bậc | File Lõi |
+|---------|---------|------|
+| COO | Executive | `coo.md` |
+| Customer Success Lead | Manager | `cs-lead.md` |
+| Tech Support Tier-2 | Specialist | `tech-support-tier-2.md` |
+| Implementation Engineer | Specialist | `implementation-engineer.md` |
+| Renewal/Churn Analyst | Specialist | `renewal-churn-analyst.md` |
+
+### 18. Phân hệ Gen Nhân sự & Đào tạo (`talent-culture/`)
+| Vai trò | Cấp bậc | File Lõi |
+|---------|---------|------|
+| CHRO | Executive | `chro.md` |
+| Talent Acquisition Lead | Manager | `talent-acquisition-lead.md` |
+| L&D Trainer | Specialist | `ld-trainer.md` |
+| Org Development Spec | Specialist | `org-development-specialist.md` |
+
+### 19. Ban Thanh Tra & Kiểm soát Phép (`internal-audit/`)
+| Vai trò | Cấp bậc | File Lõi |
+|---------|---------|------|
+| Chief Audit Executive | Executive | `chief-audit-executive.md` |
+| Fraud Investigator | Specialist | `fraud-investigator.md` |
+| IT Compliance Auditor | Specialist | `it-compliance-auditor.md` |
+
+### 20. Khối Thượng Đỉnh C-Suite (`office-of-ceo/`)
+| Vai trò | Cấp bậc | File Lõi |
+|---------|---------|------|
+| CEO | Executive | `ceo.md` |
+| Chief Strategy Officer | Executive | `chief-strategy-officer.md` |
+| Chief of Staff (Jen) | Executive | `chief-of-staff.md` |
+| ESG/Ethics Advisor | Executive | `esg-ethics-advisor.md` |
+
+---
+
+## 🔥 PHÉP TẮC BÁO CÁO (CROSS-VALIDATION)
+
+- Hệ thống Yêu cầu Vốn 1 Cấp (VP $\rightarrow$ C-Suite $\rightarrow$ Chairman).
+- Các bộ phận có quyền Vetos (Từ chối mệnh lệnh Hành quyết Nếu Thấy Lỗi): 
+  - `infosec-privacy` có quyền phủ quyết `engineering-infra`.
+  - `internal-audit` có quyền phủ quyết `procurement-supply-chain` nếu nghi vấn kê giá thầu.
+  - `corporate-finance` có quyền cắt dự án của R&D Labs nếu Cashburn quá 100%.

@@ -29,20 +29,38 @@ Với mỗi hóa đơn tìm thấy, Kế toán trưởng sẽ phân tích:
 
 ---
 
-## BƯỚC 3: TRẢ KẾT QUẢ CHO CHAIRMAN (BẢNG COPY & PASTE)
+## BƯỚC 3: GHI LÊN GOOGLE SHEET + BÁO CÁO CHAIRMAN
 
-Kế toán trưởng trả về bảng Markdown chứa sẵn dữ liệu dòng để Chairman **Copy và Dán** trực tiếp vào Sheet `Journal_Entries` trên file Excel `VCT Platform - Finance.xlsx`.
+### 3.1 Thêm đối tác mới (nếu cần)
+// turbo
+Nếu nhà cung cấp chưa có trong hệ thống, thêm trước:
+```bash
+node _agent/scripts/finance-sync.js add-contact '{"ma":"NCC_XXX","ten":"Tên NCC","phan_loai":"Nhà cung cấp"}'
+```
+
+### 3.2 Ghi bút toán tự động lên Google Sheet
+// turbo
+Với MỖI hóa đơn hợp lệ, chạy lệnh:
+```bash
+node _agent/scripts/finance-sync.js add-entry '{"ngay":"DD/MM/YYYY","chungtu":"Hóa đơn VAT","dien_giai":"Mô tả","doi_tac":"NCC_XXX","tk_no":"642","tk_co":"1121","so_tien":AMOUNT,"thue":TAX_RATE,"du_an":"PLATFORM"}'
+```
+
+### 3.3 Báo cáo cho Chairman
 
 **Format trả lời bắt buộc:**
 
 ```markdown
-Thưa Chairman, Kế toán trưởng đã quét xong hộp thư `hoadon.vct@gmail.com`.
-Hôm nay có **[X]** hóa đơn hợp lệ mới. Ngài vui lòng copy các dòng dưới đây dán vào sheet `Journal_Entries`:
+Thưa Chairman, Kế toán trưởng đã quét xong hộp thư `hoadon.vct@gmail.com` và **tự động ghi lên Google Sheet**.
 
-| Ngay_PhatSinh | Dien_Giai | Ma_DoiTac | TK_No | TK_Co | Tong_Tien | Trang_Thai |
-|---------------|-----------|-----------|-------|-------|-----------|------------|
-| [DD/MM/YYYY] | Phí server AWS | Amazon Web Services | 642 | 1121 | 1500000 | Hoàn tất |
-| [DD/MM/YYYY] | Mua phần mềm Misa | Misa | 642 | 331 | 5000000 | Chưa thanh toán |
+Hôm nay có **[X]** hóa đơn hợp lệ mới:
 
-*(Ghi chú thêm từ Kế toán trưởng: Nếu có hóa đơn nào có VAT cần tách thuế, vui lòng chỉ đạo thêm để tôi lập bút toán Nợ 1331).*
+| ID Giao dịch | Ngày | Diễn Giải | TK Nợ | TK Có | Tổng Tiền | Trạng Thái |
+|--------------|------|-----------|-------|-------|-----------|------------|
+| VCT-YYMMDD-XXXX | DD/MM/YYYY | Phí server AWS | 642 | 1121 | 1.500.000 ₫ | Hoàn tất |
+
+🔗 [Xem trên Google Sheets](https://docs.google.com/spreadsheets/d/1vpapB9lquRvrbfeNRgPAnLjBZCDioUbCA05wosw5pJc/edit)
+
+*(Lưu ý: Nếu có hóa đơn VAT cần tách thuế, thuế đã được tự động tính và ghi nhận.)*
 ```
+
+// turbo-all

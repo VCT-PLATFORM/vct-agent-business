@@ -66,11 +66,15 @@ Output: Draft v1
 ```
 // turbo
 Actor: Graphic Designer
+├── ⚠️ LOGO CHECK: Nếu thiết kế có logo VCT → CHỈ dùng file từ
+│   _agent/shared_knowledge/logo/ — KHÔNG BAO GIỜ tự vẽ hoặc AI-generate
+│   (Xem: _agent/shared_knowledge/brand/LOGO_USAGE_POLICY.md)
 ├── Đọc content draft → Xác định visual concept
 ├── Tạo design brief (composition, colors, typography)
 ├── Đúng dimensions cho platform (xem Designer SKILL.md)
 ├── Text trên ảnh khớp với content
 ├── Tạo AI Image Prompt nếu cần generate ảnh
+│   (Prompt PHẢI ghi rõ: "Không vẽ logo, logo sẽ được overlay sau")
 Output: Visual asset description / prompt
 ```
 

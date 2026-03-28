@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VCT Platform - Strategic Pitch Deck</title>
+    <!-- Inter Font & JetBrains Mono for Numbers/Data -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Reset & Core Scroll Setup */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg-color: #050505;
+            --surface-1: #111111;
+            --surface-2: #1A1A1A;
+            --surface-glass: rgba(26, 26, 26, 0.6);
+            --border-color: rgba(255, 255, 255, 0.1);
+            --border-highlight: rgba(255, 255, 255, 0.3);
+            --text-main: #FFFFFF;
+            --text-muted: #A1A1AA;
+            --accent-blue: #0070F3;
+            --accent-blue-dim: rgba(0, 112, 243, 0.2);
+            --accent-cyan: #00E4FF;
+            --accent-red: #FF3366;
+            --accent-green: #00D88C;
+        }
+
+        body, html {
+            width: 100vw; height: 100vh;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            overflow: hidden; /* Lock master scrolling */
+        }
+        
+        /* The Parallax Clean Background */
+        .grid-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            background-image: 
+                linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: -1;
+            /* Optional: Add a subtle blue glow in the center */
+            background-color: #000;
+        }
+
+        .grid-bg::after {
+            content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+            background: radial-gradient(circle at 50% 50%, rgba(0, 112, 243, 0.05) 0%, transparent 60%);
+            z-index: -1;
+        }
+
+        /* The Scroll-Snap Container */
+        .scroller {
+            height: 100vh;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
+        }
+
+        /* Custom Scrollbar for Scroller */
+        .scroller::-webkit-scrollbar { width: 4px; }
+        .scroller::-webkit-scrollbar-track { background: var(--bg-color); }
+        .scroller::-webkit-scrollbar-thumb { background: var(--surface-2); border-radius: 4px; }
+        .scroller::-webkit-scrollbar-thumb:hover { background: var(--border-highlight); }
+
+        /* Each Slide Section */
+        section {
+            min-height: 100vh;
+            width: 100%;
+            scroll-snap-align: start;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 5%;
+            position: relative;
+        }
+
+        /* Layout Main Container */
+        .container {
+            max-width: 1400px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        /* Typography */
+        h1 { font-size: 4em; font-weight: 800; line-height: 1.1; margin-bottom: 24px; letter-spacing: -0.04em; }
+        h2 { font-size: 2.8em; font-weight: 800; margin-bottom: 24px; letter-spacing: -0.03em; color: var(--text-main); }
+        h3 { font-size: 1.5em; font-weight: 600; margin-bottom: 16px; letter-spacing: -0.01em; color: var(--text-main); }
+        .mono-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.8em; font-weight: 700; color: var(--accent-cyan); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 16px; display: block; }
+        p { font-size: 1.1em; font-weight: 400; line-height: 1.6; color: var(--text-muted); }
+        
+        .accent { color: var(--accent-blue); }
+        .text-gradient {
+            background: linear-gradient(90deg, #FFFFFF 0%, #A1A1AA 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+
+        /* Data / Bento Box Grid System */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .bento-item {
+            background: var(--surface-1);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 40px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .bento-item:hover {
+            border-color: var(--border-highlight);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+        }
+
+        .bento-item::before {
+            content: ''; position: absolute; top:0; left:0; width: 4px; height: 100%; background: var(--accent-blue);
+            opacity: 0; transition: opacity 0.3s ease;
+        }
+        .bento-item:hover::before { opacity: 1; }
+
+        /* specific spans for grid */
+        .span-12 { grid-column: span 12; }
+        .span-8 { grid-column: span 8; }
+        .span-6 { grid-column: span 6; }
+        .span-4 { grid-column: span 4; }
+        .span-3 { grid-column: span 3; }
+
+        /* Data Points Styling */
+        .data-point {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 3.5em;
+            font-weight: 700;
+            color: var(--text-main);
+            line-height: 1;
+            margin-bottom: 16px;
+            display: block;
+        }
+        .data-point span { font-size: 0.4em; color: var(--text-muted); font-weight: 400; }
+
+        /* Lists */
+        .check-list { list-style: none; margin-top: 24px; }
+        .check-list li { margin-bottom: 16px; font-size: 1.05em; color: var(--text-muted); display: flex; align-items: flex-start; }
+        .check-list li::before { content: '✓'; color: var(--accent-green); font-weight: bold; margin-right: 12px; font-size: 1.2em; line-height: 1.2;}
+
+        /* Table / Matrix */
+        .comparison-matrix {
+            width: 100%; border-collapse: collapse; margin-top: 40px;
+            background: var(--surface-1); border-radius: 16px; overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+        .comparison-matrix th, .comparison-matrix td {
+            padding: 24px; text-align: left; border-bottom: 1px solid var(--border-color);
+            font-size: 1.05em;
+        }
+        .comparison-matrix th { background: var(--surface-2); font-weight: 600; color: var(--text-main); }
+        .comparison-matrix tr:last-child td { border-bottom: none; }
+        .comparison-matrix td:not(:first-child), .comparison-matrix th:not(:first-child) { text-align: center; }
+        /* Highlight the VCT Column */
+        .comparison-matrix td:nth-child(2), .comparison-matrix th:nth-child(2) { background: rgba(0, 112, 243, 0.05); color: var(--text-main); font-weight: 600; border-left: 1px solid var(--accent-blue-dim); border-right: 1px solid var(--accent-blue-dim);}
+        
+        .status-yes { color: var(--accent-green); font-weight: bold; }
+        .status-no { color: var(--accent-red); opacity: 0.5; }
+
+        /* Animation Classes */
+        .reveal-up { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+        .show .reveal-up { opacity: 1; transform: translateY(0); }
+        /* Stagger children in grids */
+        .show .bento-item:nth-child(1) { transition-delay: 0.1s; }
+        .show .bento-item:nth-child(2) { transition-delay: 0.2s; }
+        .show .bento-item:nth-child(3) { transition-delay: 0.3s; }
+        .show .bento-item:nth-child(4) { transition-delay: 0.4s; }
+
+    </style>
+</head>
+<body>
+
+    <div class="grid-bg"></div>
+
+    <div class="scroller" id="scroller">
+        
+        <!-- SECTION 1: EXECUTIVE SUMMARY (Hero) -->
+        <section class="scroll-section">
+            <div class="container reveal-up">
+                <span class="mono-tag" style="margin-bottom: 30px;">EXECUTIVE PITCH DECK // V.2.0.0</span>
+                <h1 style="font-size: 5em; max-width: 1200px;">Hạ tầng Số hóa <span class="accent">Võ Thuật VN</span>.</h1>
+                <p style="font-size: 1.6em; max-width: 900px; color: #FFFFFF;">
+                    VCT Platform không phải là một "Mini-App nhắn tin". Chúng tôi là <strong style="color:var(--accent-cyan);">Enterprise Resource Planning (ERP)</strong> đầu tiên trên thị trường thiết kế Độc Quyên & Chuyên Biệt cho việc kết nối Liên đoàn — Võ đường — Vận động viên.
+                </p>
+                
+                <div class="bento-grid" style="margin-top: 80px;">
+                    <div class="bento-item span-4">
+                        <span class="data-point">90%</span>
+                        <h3>Thất thoát Thời gian</h3>
+                        <p>Các võ sư đang tốn hàng giờ sổ sách thay vì đứng lớp. Công nghệ lỗi thời (Excel, Vở viết) kìm hãm quy mô chuỗi.</p>
+                    </div>
+                    <div class="bento-item span-4">
+                        <span class="data-point">01 <span>Giải pháp</span></span>
+                        <h3>All-in-One Hệ sinh thái</h3>
+                        <p>Giải quyết từ cái vi mô nhất (Đóng học phí QR tự động) đến cái vĩ mô nhất (Thuật toán AI xếp lịch tổ chức giải đấu Quốc gia).</p>
+                    </div>
+                    <div class="bento-item span-4" style="background: var(--accent-blue); border: none;">
+                        <span class="mono-tag" style="color: rgba(255,255,255,0.7);">TARGET Q2/2026</span>
+                        <h3 style="font-size: 2em; margin-bottom: 0;">Mời Hợp tác Pilot</h3>
+                        <p style="color: rgba(255,255,255,0.9); margin-top: 15px; font-weight:500;">Tìm kiếm 01 Liên Đoàn & 03 Chuỗi CLB làm đối tác tiên phong. Nhận quyền lợi Custom Workflow Nội bộ giá $0.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: THE PROBLEM (Data-Driven Pain Points) -->
+        <section class="scroll-section">
+            <div class="container reveal-up">
+                <span class="mono-tag">01. THE PROBLEM</span>
+                <h2>Sự Rời rạc kìm hãm Doanh thu & Quy mô.</h2>
+                <div class="bento-grid">
+                    <div class="bento-item span-4">
+                        <div style="width: 40px; height: 40px; background: rgba(255,51,102,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                            <span style="color: var(--accent-red); font-size: 1.5em; font-weight:800;">!</span>
+                        </div>
+                        <h3>Tài chính & Học phí "Thủng đáy"</h3>
+                        <p style="margin-bottom: 15px;">Điểm danh qua sổ; nhắc nợ bằng Zalo thủ công gây ái ngại. Học viên tự ý nghỉ không phép.</p>
+                        <p style="font-size: 0.9em; color: var(--accent-red);">$\rightarrow$ Doanh thu thực tế tại các Võ đường thường bị hao hụt ~15-20% mỗi tháng do không có hệ thống báo cáo công nợ tự động theo thời gian thực.</p>
+                    </div>
+                    
+                    <div class="bento-item span-4">
+                        <div style="width: 40px; height: 40px; background: rgba(255,165,0,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                            <span style="color: orange; font-size: 1.5em; font-weight:800;">?</span>
+                        </div>
+                        <h3>Mất Data Vận Động Viên (Đai/Đẳng)</h3>
+                        <p style="margin-bottom: 15px;">Cấp đai, thăng đẳng được lưu trữ vô vàn phiên bản trên Excel ở máy tính cá nhân. Bị virus là mất trắng.</p>
+                        <p style="font-size: 0.9em; color: orange;">$\rightarrow$ VĐV cống hiến 5 năm chuyển sang CLB khác hoặc Liên đoàn Tỉnh khác không có "passport" hay sổ dữ liệu mang theo để chứng minh trình độ.</p>
+                    </div>
+
+                    <div class="bento-item span-4">
+                        <div style="width: 40px; height: 40px; background: rgba(0,216,140,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                            <span style="color: var(--accent-green); font-size: 1.5em; font-weight:800;">#</span>
+                        </div>
+                        <h3>Tổ chức Giải đấu "Căng thẳng"</h3>
+                        <p style="margin-bottom: 15px;">Dùng Google Forms lộn xộn, tự tay bốc thăm chia nhánh (Draw Bracket) mất 2 tuần làm đêm.</p>
+                        <p style="font-size: 0.9em; color: var(--accent-green);">$\rightarrow$ Trong giải đấu, công tác trọng tài ghi điểm bằng tay lên giấy dễ dẫn tới sai lệch điểm số, tranh cãi & làm mất uy tín Ban Tổ Chức lớn.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: THE ECOSYSTEM SOLUTION -->
+        <section class="scroll-section">
+            <div class="container reveal-up">
+                <span class="mono-tag">02. THE SOLUTION (ECOSYSTEM ARCHITECTURE)</span>
+                <h2>Kiến trúc 4 Điểm chạm số hóa toàn diện.</h2>
+                <p style="max-width: 800px; margin-bottom: 40px;">VCT thay thế 5 phần mềm lắt nhắt thành 1 Single-Source-of-Truth. Kết nối trực tiếp Dữ liệu Kế toán $\leftrightarrow$ Dữ liệu Đào tạo $\leftrightarrow$ Dữ liệu Giải đấu Quốc Gia.</p>
+                
+                <div class="bento-grid">
+                    <div class="bento-item span-6">
+                        <h3>1. Dành cho Liên đoàn / Cấp Viện</h3>
+                        <ul class="check-list">
+                            <li><strong>Phân quyền Quản trị Đa phân tầng:</strong> Chủ tịch $\rightarrow$ Trưởng Ban Chuyên Môn $\rightarrow$ Chủ nhiệm CLB $\rightarrow$ Trọng Tài.</li>
+                            <li><strong>Kiểm duyệt Thăng Cấp:</strong> Hệ thống tiếp nhận Yêu cầu xét duyệt Đai/Đẳng Đại trà. Cấp QR Code chứng nhận điện tử (Chặn nạn làm giả giấy chứng nhận Đẳng).</li>
+                            <li><strong>Quản lý Lịch Sử Thi Đấu Quốc Gia:</strong> Kho lưu trữ Big Data về mọi thành tích của VĐV thuộc trực thuộc các tỉnh.</li>
+                        </ul>
+                    </div>
+                    <div class="bento-item span-6">
+                        <h3>2. Dành cho Võ đường / Chuỗi CLB</h3>
+                        <ul class="check-list">
+                            <li><strong>CRM Chăm sóc Học viên:</strong> Điểm danh tự động qua Quét thẻ QR/Khuôn mặt.</li>
+                            <li><strong>Kế toán Tự Động Hóa:</strong> Link trực tiếp API Ngân hàng. Học viên chuyển khoản đúng cú pháp $\rightarrow$ Hệ thống tự gạch nợ, tự nhắn Zalo báo cha mẹ "Đã thu tiền đợt 1".</li>
+                            <li><strong>Phân công HLV Trợ giảng:</strong> Tính toán KPI giờ dạy và chi lương Part-time/Full-time tự động cuối tháng.</li>
+                        </ul>
+                    </div>
+                    <div class="bento-item span-6">
+                        <h3>3. Dành cho Ban Tổ Chức Giải Đấu</h3>
+                        <ul class="check-list">
+                            <li><strong>AI Bracket Generator:</strong> Một cú Click chuột tạo ra sảnh thi đấu 500 VĐV, bốc thăm ngẫu nhiên, tự động chia hạng cân nam/nữ/độ tuổi (VD: U18 - Dưới 55kg). Hủy tự động nếu VĐV vi phạm cân nặng chuẩn (Weigh-in).</li>
+                            <li><strong>Real-time Scoring Board:</strong> Màn hình Digital cho Ban giám khảo nhập điểm, đồng bộ siêu tốc (0.1s) lên màn chiếu lớn LED tại Sân vận động và Website trực tuyến dạng Live.</li>
+                        </ul>
+                    </div>
+                    <div class="bento-item span-6">
+                        <h3>4. Dành cho Phụ Huynh & VĐV (End-User)</h3>
+                        <ul class="check-list">
+                            <li><strong>Passport Võ Thuật Số:</strong> Một thẻ mã Định danh theo học viên suốt đời, dù đổi Liên đoàn, mọi thành tích/huy chương vẫn giữ nguyên.</li>
+                            <li><strong>Cổng thông tin phụ huynh:</strong> Xem lịch trình thi đấu của con, ảnh tốt nghiệp đai, thông báo nghỉ lễ, nộp tiền 24/7. Tránh rác tin nhắn nhóm Zalo chung.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: THE MOAT (COMPETITIVE ADVANTAGE) -->
+        <section class="scroll-section">
+            <div class="container reveal-up">
+                <span class="mono-tag">03. COMPETITIVE ADVANTAGE (THE MOAT)</span>
+                <h2>Khác biệt Cốt lõi của VCT Platform.</h2>
+                <p style="max-width: 800px;">Tại sao dùng phần mềm Quản lý Phòng Tập Giá 300k/tháng (như GymMaster / DotB) hay dùng phần mềm thi đấu Smoothcomp của Mỹ lại KHÔNG khả thi?</p>
+                
+                <table class="comparison-matrix">
+                    <thead>
+                        <tr>
+                            <th>Năng lực Giải quyết Cốt Lõi</th>
+                            <th>VCT PLATFORM (Vietnam)</th>
+                            <th>Phần mềm Gym/Fitness (VN)</th>
+                            <th>Smoothcomp / UWW (Nước ngoài)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Mô Hình Đai/Đẳng & Võ đạo Đặc Thù</strong><br><span style="font-size: 0.8em; color: var(--text-muted); font-weight: normal;">Thăng đai, chờ xét duyệt từ sư phụ, lịch sử quá trình...</span></td>
+                            <td class="status-yes">Có (Tối ưu Cực Tốt)</td>
+                            <td class="status-no">Không (Thiết kế cho PT/Gym)</td>
+                            <td class="status-no">Không (Chỉ làm mảng thi đấu)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Lên Sơ Đồ Bốc Thăm (Giải Đấu Kháng chiến)</strong><br><span style="font-size: 0.8em; color: var(--text-muted); font-weight: normal;">Single Elimination, Double Bracket, Repechage.</span></td>
+                            <td class="status-yes">Có (Thuật toán AI Draw Tự động)</td>
+                            <td class="status-no">Không</td>
+                            <td class="status-yes">Có</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tích hợp Thanh toán & Zalo Nội địa VN</strong><br><span style="font-size: 0.8em; color: var(--text-muted); font-weight: normal;">VietQR Auto, Zalo ZNS API, Thẻ tín dụng nội địa.</span></td>
+                            <td class="status-yes">Có (Native)</td>
+                            <td class="status-yes">Có</td>
+                            <td class="status-no">Không (Chỉ Stripe/Paypal Visa)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Chi phí Đầu tư Dài hạn</strong></td>
+                            <td class="accent">Linh hoạt theo quy mô & Pilot Free</td>
+                            <td>Chỉ quản lý 1 điểm. Mở chuỗi rất đắt.</td>
+                            <td class="status-no">Rất Đắt ($2/VĐV/Giải đô la Mỹ)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p style="margin-top: 24px; font-weight: 500;">$\rightarrow$ **Kết luận**: VCT Platform độc quyền khoảng trống thị trường (Blue Ocean) giao thoa giữa Phần mềm Doanh nghiệp (CRM/ERP) và Phần mềm Giải đấu Thể Thao (SportsTech) tại Việt Nam.</p>
+            </div>
+        </section>
+
+        <!-- SECTION 5: ENTERPRISE GRADE ARCHITECTURE -->
+        <section class="scroll-section">
+            <div class="container reveal-up">
+                <span class="mono-tag">04. SYSTEM ARCHITECTURE</span>
+                <h2>Cam kết Hạ tầng Dữ liệu chuẩn Doanh nghiệp Cơ sở.</h2>
+                <div class="bento-grid">
+                    <div class="bento-item span-4">
+                        <span class="data-point">100% <span>Ownership</span></span>
+                        <h3>Chủ quyền Dữ liệu Tuyệt Đối</h3>
+                        <p>Danh sách ngàn học viên, doanh thu hàng tỷ là Tài Sản của Liên Đoàn/CLB. VCT cam kết tính năng "One-Click Export Raw Data". Ngài có thể kết xuất toàn bộ DB ra Excel/CSV cục bộ bất cứ giây phút nào. Không Vendor Lock-in (Không giam giữ Data).</p>
+                    </div>
+                    <div class="bento-item span-4">
+                        <span class="data-point">< 50 <span>ms</span></span>
+                        <h3>Real-time Edge Cloud</h3>
+                        <p>Triển khai Serverless Toàn cầu trên Vercel / Supabase PostgreSQL. Khả năng chịu tải đồng thời (Concurrency) mùa giải đấu hàng nghìn VĐV điểm danh cùng lúc mà không sập hệ thống. Khác hẳn các phần mềm thiết kế dùng Share Hosting rẻ tiền.</p>
+                    </div>
+                    <div class="bento-item span-4">
+                        <span class="data-point">Role <span>Based</span></span>
+                        <h3>Bảo mật Phân quyền Row-Level</h3>
+                        <p>Sử dụng JWT Tokens và RLS (Row Level Security). Nhân viên lễ tân CLB không thể xem Bảng Lương Giáo viên. Giáo viên CLB A không thể xem Doanh thu Lớp B. Chủ tịch Liên đoàn được cấp Dashboard Quyền Lực xem biểu đồ tăng trưởng số học giả toàn quốc.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: THE ASK & PILOT PROGRAM -->
+        <section class="scroll-section">
+            <div class="container reveal-up">
+                <span class="mono-tag" style="color: var(--accent-green);">05. EARLY ADOPTER CAMPAIGN (ACTION)</span>
+                <h1 style="font-size: 4em;">Lời Trích Thỉnh (The Ask).</h1>
+                <p style="max-width: 800px; font-size: 1.4em;">Chúng tôi chuẩn bị khai mở hệ thống Bản Mới Nhất. Thay vì bán ngay lập tức trên thị trường, chúng tôi đang tuyển chọn **Đối Tác Tiên Phong**.</p>
+                
+                <div class="bento-item span-12" style="background: var(--surface-2); border-color: var(--accent-blue-dim); margin-top: 40px; text-align: center; padding: 60px;">
+                    <h3 style="color: var(--accent-blue); font-size: 2em; margin-bottom: 20px;">TÌM KIẾM 01 LIÊN ĐOÀN VÀ 03 CHUỖI CÂU LẠC BỘ (Q2/2026)</h3>
+                    <p style="margin-bottom: 40px; color: var(--text-main); font-size: 1.2em;">Trở thành Đối tác Pilot, tổ chức của ngài nhận TẤT CẢ Đặc quyền sau:</p>
+                    
+                    <div style="display: flex; justify-content: center; gap: 60px; text-align: left; max-width: 900px; margin: 0 auto; margin-bottom: 60px;">
+                        <div>
+                            <span style="font-size: 1.5em; display:block; margin-bottom: 10px;">🏷️</span>
+                            <h4 style="font-size: 1.2em; margin-bottom: 10px;">MIỄN PHÍ TRỌN ĐỜI CỐT LÕI</h4>
+                            <p style="font-size: 0.9em; color: var(--text-muted);">Tài khoản VIP vĩnh viễn không thu phí mảng "CRM CLB Core". Tiết kiệm $2,000 phí license mỗi năm.</p>
+                        </div>
+                        <div>
+                            <span style="font-size: 1.5em; display:block; margin-bottom: 10px;">⚙️</span>
+                            <h4 style="font-size: 1.2em; margin-bottom: 10px;">CODE THEO LUỒNG ĐẶC THÙ</h4>
+                            <p style="font-size: 0.9em; color: var(--text-muted);">CTO của chúng tôi sẽ ngồi họp 1-1 để Tùy chỉnh (Tailor/Customize) phần mềm theo đúng sổ sách Kế Toán mà CLB ngài đang dùng. Không ép ngài phải theo Form chung.</p>
+                        </div>
+                        <div>
+                            <span style="font-size: 1.5em; display:block; margin-bottom: 10px;">🎖️</span>
+                            <h4 style="font-size: 1.2em; margin-bottom: 10px;">ĐỘI NGŨ CHUYỂN ĐỔI SỐ 1-1</h4>
+                            <p style="font-size: 0.9em; color: var(--text-muted);">Có riêng Tech Lead On-site trong tuần đầu tiên để Import File Excel cũ của CLB vào Hệ Thống mới (Đảm bảo hoạt động trơn tru sau 3 ngày cắt băng ruy băng).</p>
+                        </div>
+                    </div>
+
+                    <a href="mailto:chairman@vctplatform.vn" style="display: inline-block; background: var(--text-main); color: #000; padding: 20px 60px; border-radius: 8px; font-weight: 800; font-size: 1.2em; text-decoration: none; transition: transform 0.2s;">Sắp xếp Demo Trực Tiếp & Lấy Báo Giá $\rightarrow$</a>
+                    <p style="margin-top: 24px; font-size: 0.9em; color: var(--text-muted);">Hotline / Zalo: Lãnh đạo VCT Platform (Xem đính kèm). Website: vctplatform.vn</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Scroll Intersection Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.scroll-section');
+            const scroller = document.getElementById('scroller');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                    }
+                });
+            }, { root: scroller, threshold: 0.15 });
+
+            sections.forEach(sec => observer.observe(sec));
+        });
+    </script>
+</body>
+</html>

@@ -66,3 +66,11 @@
 3. **Action-oriented** — Kết thúc báo cáo bằng "Next Steps", không chỉ "summary".
 4. **No surprises** — Bad news nên escalate NGAY, không đợi đến báo cáo định kỳ.
 5. **Lưu trữ** — Mọi báo cáo lưu vào `memory/` của vai trò tương ứng.
+
+---
+## ✨ Kỷ nguyên OpenSpace: Giao Thức Rút Kinh Nghiệm Bắt Buộc
+> Lệnh Tối Cao: CẤM các Đặc Vụ đóng Task mà không thực hiện Self-Reflection (Tự Rút Kinh Nghiệm).
+
+6. **Self-Evolve (Bắt buộc)**: Khi giải quyết xong 1 Vấn Đề Khó, Đặc vụ PHẢI tự sinh ra 1 File Kinh Nghiệm chứa Prompt/Rule giải quyết vấn đề đó. Tên file định dạng: `[loai_ky_nang].evo.md`. 
+7. **Publish to Registry**: Đặc vụ tự động lưu file đó vào `shared_knowledge/open_space_registry/` để đặc vụ khác ngày mai biết đường lấy ra dùng chung. 
+(*Ví dụ: Fix xong lỗi CSS Safari -> Lưu file `fix_safari_css_bugs.evo.md` vào Registry*).

@@ -1,0 +1,87 @@
+
+============================================================
+Sheet: Setup_COA
+============================================================
+Dòng: 24
+
+  [0] Mã_TK | Tên_Tài_Khoản | Nhóm_Cha | Loại_Dòng_Tiền | Số_Tài_Khoản
+  [1] 111 | Tiền mặt | Tài sản | HĐ Kinh doanh
+  [2] 1121 | NH Techcombank - CONG TY TNHH VCT PLATFORM | Tài sản | HĐ Kinh doanh | TCB: 99869988
+  [3] 1122 | NH Techcombank - HOANG BA TUNG - 8899869988 | Tài sản | HĐ Kinh doanh | TCB: 8899869988
+  [4] 1123 | NH Techcombank - HOANG BA TUNG - 6899869988 | Tài sản | HĐ Kinh doanh | TCB: 6899869988
+  [5] 1124 | NH Vietcombank - HOANG BA TUNG | Tài sản | HĐ Kinh doanh | VCB: 0511000428875
+  [6] 131 | Phải thu khách hàng | Tài sản | HĐ Kinh doanh
+  [7] 141 | Tạm ứng nhân viên | Tài sản | HĐ Kinh doanh
+  [8] 211 | Tài sản cố định (Máy móc, Server) | Tài sản | HĐ Đầu tư
+  [9] 242 | Chi phí trả trước (Tên miền, Thuê VP) | Tài sản | HĐ Kinh doanh
+  [10] 331 | Phải trả người bán | Nguồn vốn | HĐ Kinh doanh
+  [11] 333 | Thuế và các khoản nộp NN | Nguồn vốn | HĐ Kinh doanh
+  [12] 334 | Phải trả người lao động (Lương) | Nguồn vốn | HĐ Kinh doanh
+  [13] 338 | Phải trả khác (Quỹ thưởng Prize Pool) | Nguồn vốn | HĐ Tài chính
+  [14] 3387 | Doanh thu chưa thực hiện (Gói năm) | Nguồn vốn | HĐ Kinh doanh
+  [15] 411 | Vốn điều lệ / Vốn chủ sở hữu | Nguồn vốn | HĐ Tài chính
+  [16] 5111 | Doanh thu Platform (Gói dịch vụ) | Doanh thu | HĐ Kinh doanh
+  [17] 5112 | Doanh thu Media & Tài trợ | Doanh thu | HĐ Kinh doanh
+  [18] 5113 | Doanh thu Arena (Vé giải đấu) | Doanh thu | HĐ Kinh doanh
+  [19] 615 | Chi phí tài chính (Phí VNPay, Bank) | Chi phí | HĐ Kinh doanh
+  [20] 632 | Giá vốn (Server, Vận hành giải đấu) | Chi phí | HĐ Kinh doanh
+  [21] 642 | Chi phí quản lý (Lương, MKT, VP) | Chi phí | HĐ Kinh doanh
+  [22] 711 | Thu nhập khác | Doanh thu | HĐ Đầu tư
+  [23] 811 | Chi phí khác | Chi phí | HĐ Kinh doanh
+
+============================================================
+Sheet: Setup_Contact
+============================================================
+Dòng: 6
+
+  [0] Mã_Đối_Tác | Tên_Đối_Tác | Phân_Loại | Số_Tài_Khoản | MST/Phone
+  [1] KH_001 | Khách hàng Vãng lai | Khách hàng
+  [2] NCC_001 | iNet & Cloudflare | Nhà cung cấp
+  [3] NCC_002 | Viettel Post | Nhà cung cấp
+  [4] NCC_003 | Trần Thị Minh Tâm | Nhà cung cấp | VCB: 1045193195
+  [5] NV_001 | Hoàng Bá Tùng (CEO) | Nội bộ | TCB: 8899869988 | VCB: 0511000428875
+
+============================================================
+Sheet: Setup_Project
+============================================================
+Dòng: 5
+
+  [0] Mã_Dự_Án | Tên_Mảng | Trạng_Thái
+  [1] PLATFORM | VCT Core Platform | Active
+  [2] MEDIA | VCT Media & Production | Active
+  [3] ARENA | VCT Tournament Arena | Active
+  [4] VODUONG | CLB Tây Sơn Võ Đạo | Active
+
+============================================================
+Sheet: Journal_Entries
+============================================================
+Dòng: 12
+
+  [0] ID_GiaoDich | Ngay_PhatSinh | So_ChungTu | Loai_ChungTu | Dien_Giai | Ma_DoiTac | TK_No | TK_Co | GiaTri_TruocThue | Thue_Suat | Tien_Thue | Tong_Tien | Ma_DuAn | Trang_Thai | User_Stamp
+  [1] VCT-210303-OA0E | 03/03/2021 |  | Phiếu chi | Lệ phí nộp hồ sơ ĐKKD | NV_001 | 642 | 411 | 101.100 ₫ | 0% | 0 ₫ | 101.100 ₫ | PLATFORM | Hoàn tất
+  [2] VCT-210321-ZZXJ | 21/03/2021 |  | Phiếu chi | Phí vận chuyển hồ sơ ĐKKD | NV_001 | 642 | 411 | 33.000 ₫ | 0% | 0 ₫ | 33.000 ₫ | PLATFORM | Hoàn tất
+  [3] VCT-210323-TTNX | 23/03/2021 |  | Hóa đơn VAT | Mua chữ ký số (Giá xuất HĐ) | NV_001 | 242 | 411 | 1.782.000 ₫ | 0% | 0 ₫ | 1.782.000 ₫ | PLATFORM | Hoàn tất
+  [4] VCT-210323-7OVF | 23/03/2021 |  | Phiếu thu | Chiết khấu đại lý chữ ký số | NV_001 | 411 | 711 | 200.000 ₫ | 0% | 0 ₫ | 200.000 ₫ | PLATFORM | Hoàn tất
+  [5] VCT-210323-VXBU | 23/03/2021 |  | Hóa đơn VAT | Mua tên miền | NV_001 | 242 | 411 | 450.000 ₫ | 0% | 0 ₫ | 450.000 ₫ | PLATFORM | Hoàn tất
+  [6] VCT-210323-FWFH | 23/03/2021 |  | Hóa đơn VAT | Khắc con dấu công ty | NV_001 | 642 | 411 | 347.222 ₫ | 8% | 27.778 ₫ | 375.000 ₫ | PLATFORM | Hoàn tất
+  [7] VCT-210323-3EM2 | 23/03/2021 |  | Phiếu chi | Phí vận chuyển con dấu công ty | NV_001 | 642 | 411 | 101.000 ₫ | 0% | 0 ₫ | 101.000 ₫ | PLATFORM | Hoàn tất
+  [8] VCT-210323-27OZ | 23/03/2021 |  | Phiếu chi | Nạp tài khoản Viettel IDC | NV_001 | 632 | 411 | 50.000 ₫ | 0% | 0 ₫ | 50.000 ₫ | PLATFORM | Hoàn tất
+  [9] VCT-210323-FDUL | 24/03/2026 |  | Sao kê NH | CEO chuyển khoản góp vốn điều lệ | NV_001 | 1124 | 411 | 10.000.000 ₫ | 0% | 0 ₫ | 10.000.000 ₫ | PLATFORM | Hoàn tất
+  [10] VCT-260325-ZEEH | 25/03/2026 |  | Hóa đơn VAT | Phí vận chuyển Hồ sơ chữ ký số | NCC_002 | 642 | 1121 | 36.900 ₫ | 0% | 0 ₫ | 36.900 ₫ | PLATFORM | Hoàn tất
+  [11] VCT-260326-FGOT | 26/03/2026 |  | Sao kê NH | Thanh toán tiền thuê văn phòng tháng 03/2026 cho bà Trần Thị Minh Tâm | NCC_003 | 642 | 1121 | 5.000.000 ₫ | 0% | 0 ₫ | 5.000.000 ₫ | PLATFORM | Hoàn tất
+
+============================================================
+Sheet: Budget_Plan
+============================================================
+Dòng: 1
+
+  [0] Thang_Nam | Ma_KichBan | Ma_TK | Ma_DuAn | Ngan_Sach_DuKien | Ghi_Chu
+
+============================================================
+Sheet: Recon_Bank
+============================================================
+Dòng: 3
+
+  [0] Ma_TK_Bank | So_Du_He_Thong | So_Du_Thuc_Te | Chenh_Lech | Trang_Thai
+  [1] 1121 | -5.036.900 đ
+  [2] 111 | 0 đ
