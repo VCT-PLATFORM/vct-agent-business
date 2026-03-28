@@ -1,0 +1,112 @@
+{
+  "vct_context": true,
+  "last_compressed": "2026-03-28T09:18:23.151Z",
+  "sections": {
+    "meta": [],
+    "1 Về Công ty": [
+      "Thông tin     Chi tiết                         :",
+      "**Tên**       Công Ty TNHH VCT Platform        :",
+      "**Loại hình** Công ty Công nghệ — SaaS Platform:",
+      "**Lĩnh vực**  SaaS — Quản trị Võ thuật          :",
+      "**Thành lập** [Cập nhật: 09/03/2026]           :",
+      "**Quy mô**    [Cập nhật: 01 người]             :",
+      "**Trụ sở**    Việt Nam                         :",
+      "**Website**   [Cập nhật: vctplatform.vn]       :",
+      "**GitHub**    https://github.com/VCT-PLATFORM  :"
+    ],
+    "2 Tầm nhìn  Sứ mệnh": [
+      {
+        "_subsection": "Tầm nhìn (Vision)"
+      },
+      {
+        "_subsection": "Sứ mệnh (Mission)"
+      },
+      {
+        "_subsection": "Giá trị Cốt lõi (Core Values)"
+      },
+      "1. Võ Đạo (Integrity) — Minh bạch, trung thực trong mọi việc — từ sản phẩm đến kinh doanh",
+      "2. Tinh Tấn (Excellence) — Không ngừng cải tiến, không chấp nhận tầm thường",
+      "3. Đồng Hành (Customer First) — Thành công của khách hàng là thành công của mình",
+      "4. Đột Phá (Innovation) — Dám thay đổi, dám số hóa cái cũ — dẫn đầu thay vì theo sau",
+      "5. Kỷ Luật (Ownership) — Mỗi người chịu trách nhiệm trọn vẹn với kết quả của mình"
+    ],
+    "3 Sản phẩm  Dịch vụ": [
+      {
+        "_subsection": "Sản phẩm Chính"
+      },
+      "Sản phẩm Mô tả Khách hàng Mục tiêu Giá:",
+      "VCT Platform Nền tảng quản trị võ thuật toàn diện Liên đoàn, CLB, HLV, VĐV, Phụ huynh Tùy theo nhu cầu & quy mô:",
+      {
+        "_subsection": "Unique Value Proposition (UVP)"
+      },
+      {
+        "_subsection": "Product-Market Fit Signals"
+      },
+      "[Đang phát triển sản phẩm — sẽ cập nhật khi có dữ liệu thực]"
+    ],
+    "4 Khách hàng Mục tiêu": [
+      {
+        "_subsection": "Ideal Customer Profile (ICP)"
+      },
+      "Attribute Detail:",
+      "**Ngành** Võ thuật, Thể thao:",
+      "**Đối tượng** Liên đoàn võ thuật, Ban tổ chức giải, Câu lạc bộ/Võ đường, Võ sư/HLV, VĐV, Phụ huynh VĐV:",
+      "**Vị trí địa lý** Việt Nam (ưu tiên) → Đông Nam Á → Toàn cầu:",
+      "**Pain Points** Quản lý học viên/VĐV thủ công, Tổ chức giải đấu phức tạp, Thiếu minh bạch trong cấp đai/thăng cấp, Quản lý tài chính CLB/liên đoàn kém hiệu quả, Phụ huynh thiếu thông tin về con em:",
+      "**Decision Maker** Chủ tịch Liên đoàn, Chủ nhiệm CLB, Trưởng ban tổ chức giải:",
+      "**Budget** Tùy quy mô — từ CLB nhỏ đến Liên đoàn quốc gia:",
+      {
+        "_subsection": "User Personas"
+      },
+      "1. Chủ nhiệm CLB / Võ sư trưởng: 40-60 tuổi, quản lý 50-500 học viên, hiện dùng sổ tay + Excel. Cần: quản lý học viên, thu phí, cấp đai dễ dàng.",
+      "2. Trưởng ban tổ chức giải: Tổ chức 2-5 giải/năm, quản lý 100-1000 VĐV. Cần: đăng ký online, bốc thăm tự động, kết quả real-time.",
+      "3. Phụ huynh VĐV: 30-45 tuổi, muốn biết con tập ở đâu, tiến bộ thế nào, lịch thi đấu. Cần: app theo dõi đơn giản."
+    ],
+    "5 Cạnh tranh": [
+      {
+        "_subsection": "Competitive Landscape"
+      },
+      "Đối thủ Mạnh ở Yếu ở VCT khác biệt:",
+      "SportData (quốc tế) Quản lý giải đấu, scoring Không focus võ thuật, giá cao, không Việt hóa VCT chuyên biệt võ thuật, giá phù hợp VN, UX tiếng Việt:",
+      "Excel/Google Sheets Miễn phí, quen dùng Không scale, không liên kết, dễ sai sót VCT tự động hóa, liên kết dữ liệu toàn hệ thống:",
+      "Các app quản lý phòng tập (GymMaster, Zen Planner) Quản lý học viên, thu phí Không có giải đấu, đai/đẳng, không phù hợp võ thuật VCT hiểu nghiệp vụ đai/đẳng, giải đấu, liên đoàn:",
+      {
+        "_subsection": "Competitive Moat (Lợi thế cạnh tranh bền vững)"
+      }
+    ],
+    "6 Technology Stack": [
+      "Layer          Technology                             :",
+      "**Frontend**   Next.js, React, TypeScript, TailwindCSS:",
+      "**Backend** NestJS, TypeScript:",
+      "**Database**   PostgreSQL (Supabase)                  :",
+      "**Messaging**  NATS JetStream                         :",
+      "**Hosting**    Vercel (Frontend), Railway/Supabase (Backend):",
+      "**CI/CD**      GitHub Actions                         :",
+      "**Monitoring** Sentry (Errors), UptimeRobot (Uptime)  :",
+      "**Analytics**  Google Analytics 4, PostHog (Product)  :"
+    ],
+    "7 Metrics Hiện tại KPIs": [
+      "Metric Giá trị Hiện tại Mục tiêu Q2/2026:",
+      "MRR 0 (pre-revenue) Pilot 2-3 CLB:",
+      "Users / Organizations 0 5 CLB + 1 Liên đoàn:",
+      "Churn Rate N/A <5% monthly:",
+      "NPS N/A >50 (sau pilot):",
+      "Team Size 1 (Founder) 1 + AI Organization:",
+      "Runway Bootstrap Bootstrap:"
+    ],
+    "8 OKRs Hiện tại": [
+      {
+        "_subsection": "Company OKRs — Q2/2026 (Apr-Jun)"
+      },
+      "KR1: Hoàn thành core features (quản lý CLB, học viên, đai/đẳng) — 100%",
+      "KR2: Hoàn thành module giải đấu (đăng ký, bốc thăm, kết quả) — 100%",
+      "KR3: UI/UX đạt chuẩn chuyên nghiệp (design review passed) — 100%",
+      "KR1: Ký pilot với 2-3 CLB/Võ đường — confirmed",
+      "KR2: Ký pilot với 1 Liên đoàn cấp tỉnh/thành — confirmed",
+      "KR3: CSAT từ pilot users >80%",
+      "KR1: Tổ chức AI (SOPs, Workflows, Skills) hoàn chỉnh — ✅ Done",
+      "KR2: Brand identity và website marketing sẵn sàng",
+      "KR3: Sales materials (pitch deck, demo video) hoàn thiện"
+    ]
+  }
+}

@@ -5,7 +5,7 @@ description: Jen — Trợ lý Chánh Văn phòng, cửa ngõ giao tiếp duy nh
 # /assistant — Chief of Staff Protocol
 
 > **Khi nào dùng**: MỌI LÚC. Đây là workflow MẶC ĐỊNH khi Chairman/User đưa ra BẤT KỲ yêu cầu nào.
-> **Ai thực hiện**: AI acting as Chief of Staff (đọc `_agent/skills/strategy-office/chief-of-staff/SKILL.md`)
+> **Ai thực hiện**: AI acting as Chief of Staff (đọc `_agent/skills/office-of-ceo/SKILL.md`)
 
 ---
 
@@ -14,7 +14,7 @@ description: Jen — Trợ lý Chánh Văn phòng, cửa ngõ giao tiếp duy nh
 Trước khi xử lý yêu cầu, đọc 3 file nền tảng:
 1. `_agent/COMPANY_CONTEXT.md` — Hiểu bối cảnh công ty
 2. `_agent/AI_GOVERNANCE.md` — Tuân thủ quyền hạn AI (4 cấp)
-3. `_agent/skills/strategy-office/chief-of-staff/SKILL.md` — Nhập vai Chief of Staff
+3. `_agent/skills/office-of-ceo/SKILL.md` — Nhập vai Chief of Staff (nằm trong Mega-Skill)
 
 ---
 
@@ -35,17 +35,22 @@ Operational (<1 tuần):        Routine, follow SOP
 - Estimate effort cho mỗi task
 
 ### 1.3 Xác định vai trò (ROUTE)
-Đối chiếu với bản đồ 40 vai trò:
+Đối chiếu với bản đồ Mega-Skills (13 phòng ban):
 ```
 _agent/skills/
-├── strategy-office/    → CEO, Chief of Staff, CSO
-├── marketing-sales/    → CMO, Marketing Mgr, Sales Mgr, AE, Brand, Content, Social, SEO, Graphic, Growth
-├── finance-accounting/ → CFO, Accounting Mgr, Financial Analyst, Tax
-├── technology-product/ → CTO, Solution Arch, Tech Lead, PM, DevOps, Security, UX/UI, QA
-├── operations-pm/      → COO, Support Lead, CSM, Project Mgr
-├── human-resources/    → CHRO, HR Ops, Recruiter, L&D
-├── legal-compliance/   → General Counsel, Compliance, IP, Contract
-└── data-intelligence/  → Head of Data, Data Analyst, Data Engineer, Growth Analyst
+├── office-of-ceo/      → CEO, Chief of Staff, CSO, EA
+├── brand-comms/        → Brand, PR, Communications
+├── corporate-finance/  → CFO, Financial Analyst, Treasury
+├── customer-success/   → CSM, Support, Account Management
+├── data-ai-ops/        → Data Analyst, AI Engineer, Ops
+├── engineering-infra/  → CTO, Backend, Frontend, DevOps
+├── enterprise-sales/   → Sales Director, AE, SDR
+├── global-accounting/  → Chief Accountant, Tax, AP/AR
+├── growth-marketing/   → CMO, Performance Ads, SEO, Content
+├── infosec-privacy/    → CISO, Security Engineer, Privacy
+├── legal-ip/           → General Counsel, Contracts, IP
+├── product-management/ → CPO, PM, UX Research
+└── talent-culture/     → CHRO, Recruiter, L&D, C&B
 ```
 
 **Output bước 1**: Trình bày cho Chairman:
@@ -75,7 +80,7 @@ Với MỖI sub-task:
 
 ### 2.1 Nhập vai (Role Activation)
 // turbo
-- Đọc SKILL.md tương ứng: `_agent/skills/[dept]/[role]/SKILL.md`
+- Đọc SKILL.md tương ứng: `_agent/skills/[dept]/SKILL.md` ( Mega-Skill tải bằng JIT-Routing)
 - Đọc knowledge/ nếu có data liên quan
 - Đọc SOP liên quan nếu có
 

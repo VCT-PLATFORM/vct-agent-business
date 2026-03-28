@@ -55,7 +55,7 @@
 | Ngày | Action Item | Owner | Deliverable |
 |------|-------------|-------|-------------|
 | 28/03 | Hoàn tất đăng ký hóa đơn điện tử | CFO | Xác nhận HĐĐT |
-| 29/03 | Cập nhật tài khoản ngân hàng lên cơ quan thuế | Accounting Mgr | Mẫu 08-MST đã nộp |
+| 29/03 | Quán triệt luật 2026: Miễn tờ khai môn bài & miễn thông báo TK NH | Accounting Mgr | Update SOP Kế toán |
 | 30/03 | Lập báo cáo tài chính tháng 3 (draft) | Financial Analyst | Báo cáo TC T3 |
 | 31/03 | Hoàn tất kê khai thuế GTGT tháng 3 | Tax Specialist | Tờ khai thuế đã nộp |
 

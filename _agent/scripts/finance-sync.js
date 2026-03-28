@@ -33,6 +33,7 @@
 const { google } = require('googleapis');
 const path = require('path');
 const crypto = require('crypto');
+const fs = require('fs');
 
 const CREDENTIALS_PATH = path.join(__dirname, '..', '..', '.credentials', 'gcp-service-account.json');
 const SPREADSHEET_ID = '1vpapB9lquRvrbfeNRgPAnLjBZCDioUbCA05wosw5pJc';
@@ -137,10 +138,11 @@ async function addEntry(jsonStr) {
         requestBody: { values: [row] },
     });
 
-    console.log(`✅ Đã ghi thành công lên Google Sheet!`);
-    console.log(`   ID: ${txId}`);
-    console.log(`   Link: https://docs.google.com/spreadsheets/d/${SPREADSHEET_ID}/edit`);
+    console.log(` ✅ Đã ghi thành công lên Google Sheet!`);
+    console.log(`    ID: ${txId}`);
+    console.log(`    Link: https://docs.google.com/spreadsheets/d/${SPREADSHEET_ID}/edit`);
     
+    await syncLocalExcel();
     return txId;
 }
 
@@ -374,6 +376,41 @@ async function summary() {
     console.log(`\n${'═'.repeat(50)}\n`);
 }
 
+// ─── LOCAL EXCEL SYNC ────────────────────────────────────────────────────────
+async function syncLocalExcel() {
+    console.log('\n🔄 Đang đồng bộ Google Sheets về máy tĩnh (Excel)...');
+    try {
+        const auth = new google.auth.GoogleAuth({
+            keyFile: CREDENTIALS_PATH,
+            scopes: ['https://www.googleapis.com/auth/drive.readonly'],
+        });
+        const client = await auth.getClient();
+        const drive = google.drive({ version: 'v3', auth: client });
+
+        const dirPath = path.join(__dirname, '..', 'shared_knowledge', 'finance');
+        if (!fs.existsSync(dirPath)) fs.mkdirSync(dirPath, { recursive: true });
+        
+        const destPath = path.join(dirPath, 'VCT_Platform_Finance.xlsx');
+        const dest = fs.createWriteStream(destPath);
+
+        await new Promise((resolve, reject) => {
+            drive.files.export({
+                fileId: SPREADSHEET_ID,
+                mimeType: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+            }, { responseType: 'stream' }, (err, res) => {
+                if (err) return reject(err);
+                res.data
+                    .on('end', resolve)
+                    .on('error', reject)
+                    .pipe(dest);
+            });
+        });
+        console.log(`✅ Đã lưu file Excel tự động tại: ${destPath}\n`);
+    } catch (err) {
+        console.error('❌ Lỗi tải file Excel:', err.message);
+    }
+}
+
 // ─── CLI ROUTER ──────────────────────────────────────────────────────────────
 
 const args = process.argv.slice(2);
@@ -429,6 +466,10 @@ async function main() {
 
             case 'summary':
                 await summary();
+                break;
+
+            case 'sync-local':
+                await syncLocalExcel();
                 break;
 
             default:
