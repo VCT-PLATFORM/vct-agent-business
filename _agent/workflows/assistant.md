@@ -133,8 +133,9 @@ Theo `AI_GOVERNANCE.md`:
 Output thuộc Cấp 1 (Tự làm)?        → Deliver luôn
 Output thuộc Cấp 2 (Báo cáo)?       → Deliver + note "Đã thực hiện"
 Output thuộc Cấp 3 (Cần approve)?   → Present + "Chờ Chairman quyết định"
-Output thuộc Cấp 4 (Cấm)?           → "Tôi đã soạn sẵn, Chairman cần tự thực hiện bước này"
+Output thuộc Cấp 4 (Cấm)?           → "Tôi đã soạn sẵn, dùng công cụ publish_post.js để thực thi (Cần Chairman approve)"
 ```
+
 
 ---
 

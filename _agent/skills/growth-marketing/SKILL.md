@@ -1147,3 +1147,4 @@ Escalates to: Marketing Manager (budget), Brand Manager (brand concerns), CMO (c
 - "engagement", "followers", "community"
 - Weekly social calendar → Social Media Specialist publishes
 - Social crisis → Social Media Specialist + CMO respond
+- **Automated Posting** → Use Internal VCT Tool: `node _agent/scripts/publish_post.js --message "..." --image "..."`

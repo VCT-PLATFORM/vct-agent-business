@@ -59,7 +59,9 @@ Actor: Content Writer
 │   ├── ✅ CTA rõ ràng?
 │   ├── ✅ Đúng word count?
 │   └── ✅ Brand voice?
-Output: Draft v1
+├── ⚠️ BẮT BUỘC (Mạng Threads): Tạo THREADS VERSION
+│   └── Viết thêm một bản tóm tắt siêu ngắn gọn (Dưới 500 ký tự) đính kèm draft để xuất bản lên mạng lưới Threads.
+Output: Draft v1 (Bao gồm bài Full-version và bản Threads-version)
 ```
 
 ### Bước 4: DESIGN — Thiết kế Visual
@@ -112,7 +114,7 @@ Actor: Marketing Manager
 // turbo
 Actor: CMO (nếu campaign) hoặc Marketing Manager (nếu routine)
 ├── Strategic alignment check
-├── Final proofread
+├── Final proofread (Duyệt cả bài Full và bài Thu gọn cho Threads)
 ├── APPROVE → Publish
 ```
 
@@ -120,7 +122,10 @@ Actor: CMO (nếu campaign) hoặc Marketing Manager (nếu routine)
 ```
 // turbo
 Actor: Social Media Specialist / Content Writer
-├── **Publish Social Content**: Nếu là Fanpage, chạy lệnh `node _agent/scripts/publish-facebook.js "Nội dung" "Link_Hình_Ảnh"` thay vì tự đăng bằng tay.
+├── **Publish Social Content**: Đăng bài lên tất cả nền tảng bằng lệnh:
+│   ├── Facebook only:   `node _agent/scripts/publish_post.js --config "path/config.json"`
+│   ├── Multi-platform:  `node _agent/scripts/publish_post.js --config "path/config.json" --platforms facebook,instagram,threads`
+│   └── Verify setup:    `node _agent/scripts/publish_post.js --discover`
 ├── Execute seeding strategy (nếu social)
 ├── Track metrics:
 │   ├── Social: Reach, Engagement, Clicks, Shares
